@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat;
+    color: #acabab;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 80px;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 48;
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 40px;
+}
+p{
+    color: #acabab;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 1.6;
+}

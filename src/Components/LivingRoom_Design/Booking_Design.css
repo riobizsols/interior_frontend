@@ -1,0 +1,305 @@
+.book_header{
+    background: #111111;
+  margin-top: -130px;
+}
+.book_header h1{
+    position: absolute;
+    top: 14%;
+    left: 33%;
+}
+.book_header img{
+   max-width: 100%;
+    height:auto;
+    margin-top: 6%;
+    
+}
+.book_header p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Georgia;
+}
+
+.book_house{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+   gap:80px;
+}
+
+.book_house_para{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 10px 60px 8px 10px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+.book_house_sele{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.book_house_para_icon{
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.book_house_para_icon1{
+    margin-right:40px;
+   
+}
+
+.book_house_para:hover{
+    background-color: #12583581;
+}
+.book_house_para1:hover{
+    background-color: #12583581;
+}
+.book_house_para2:hover{
+    background-color: #12583581;
+}
+.book_house_para1{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position:absolute;
+    top: 38%;
+    left: 49%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 10px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+   
+}
+.book_house_para2{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top:38%;
+    left: 65%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 12px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.book_location_header{
+    position: absolute;
+    top: 53%;
+    left: 48%;
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Georgia;
+
+}
+.book_location{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top:60%;
+    left: 43%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  20px;
+    font-weight: 500;
+    padding: 18px 120px 18px 50px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+}
+
+.input-location-icon {
+    position: absolute;
+    left: 44%; /* Position the icon inside the input field */
+    top: 63.3%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #f8f8f8; /* Icon color */
+    pointer-events: none; /* Prevent interaction with the icon */
+  }
+  .book_house_type{
+    position: absolute;
+    top: 78%;
+    left: 46.5%;
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Georgia;
+  }
+
+  .book_house_type_room{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+   gap:80px;
+
+  }
+
+  .book_house_room{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+.book_house_room:hover{
+    background-color: #12583581;
+}
+
+
+.book_house_room1{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+.book_house_room2{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 85%;
+    left: 55%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+.book_house_room3{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 85%;
+    left: 69%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+.book_house_room1:hover{
+    background-color: #12583581;
+}
+
+.book_house_room2:hover{
+    background-color: #12583581;
+}
+
+.book_house_room3:hover{
+    background-color: #12583581;
+}
+.book_next{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    justify-content: right;
+}
+
+.book_next_p1{
+    /* position: absolute;
+    top: 98%;
+    left: 89%;
+    background-color: #d9d9d91c;
+    color:#d5ba9434;
+    padding: 10px;
+    opacity: 10px;
+    border-radius: 120px; */
+
+    position: absolute;
+    top: 98%;
+    left: 86%; /* Adjust position for proper alignment */
+    background-color: #d9d9d91c; /* Semi-transparent background */
+    color: #d5ba94; /* Icon color */
+    padding: 12px; /* Ensure padding makes it a perfect circle */
+    border-radius: 50%; /* Makes the element circular */
+    text-align: center; /* Centers the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    /* cursor: pointer;  */
+}
+
+
+.book_next_p2{
+   position: absolute;
+    top: 98%;
+    left: 92%; /* Adjust position for proper alignment */
+    background-color: #d9d9d975; /* Semi-transparent background */
+    color: #D5BA94; /* Icon color */
+    padding: 12px; /* Ensure padding makes it a perfect circle */
+    border-radius: 50%; /* Makes the element circular */
+    text-align: center; /* Centers the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    cursor: pointer;
+
+
+}

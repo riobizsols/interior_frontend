@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f1f12e;
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    border-radius: 50px;
+    gap: 100px;
+}
+
+.logo{
+    text-align: center;
+    cursor: pointer;
+    font-size: 27px;
+    font-weight: 200;
+}
+
+.logo span{
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+.nav .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.nav .nav-links li a{
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+}
+
+.btn{
+    padding: 0 0 0 30px;
+}
+
+.sign{
+    padding: 10px;
+    width: 84px;
+    background: #202121ab;
+    border: none;
+    border-radius: 50px;
+    color: whitesmoke;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.login{
+    padding: 10px;
+    width: 84px;
+    background: #577c7cab;
+    border: none;
+    border-radius: 50px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.nav .nav-links li a:hover{
+   color:#D5BA94;
+}
+
+.sign:hover{
+    background-color:#414242ab ;
+}
+.login:hover{
+    background-color: #97a9a9ab;
+}
+
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+/* For tablets and small screens (max-width: 1294px) */
+@media (max-width: 1294px) {
+    .nav {
+        top: 10%;
+        width: 90%;
+        padding: 10px 0;
+        gap: 5px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .logo span {
+        font-size: 10px;
+    }
+    .nav .nav-links li {
+        padding: 10px 15px;
+    }
+    .sign, .login {
+        width: 70px;
+        padding: 8px;
+    }
+
+  }
+  /* For tablets and small screens (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .nav {
+        top: 12%;
+        width: 90%;
+        padding: 10px 0;
+        gap: 5px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .logo span {
+        font-size: 10px;
+    }
+    .nav .nav-links li {
+        padding: 10px 15px;
+    }
+    .sign, .login {
+        width: 70px;
+        padding: 8px;
+    }
+
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 980px) {
+  
+    .nav{
+      display: flex;
+      position: absolute;
+      justify-content: space-around;
+      align-items: center;
+      color: whitesmoke;
+      top: 10%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      background-color: none;
+      backdrop-filter: none;
+      border-radius: 50px;
+      gap: 10px;
+  }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+    }
+  
+    .btn {
+      position: absolute;
+      top: 150%;
+      right: 0;
+      flex-direction: row;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+    }
+  
+    .nav-links.active,
+    .btn.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .btn {
+      gap: 5px;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+  
+  /* For mobile devices (max-width: 768px) */
+  @media (max-width: 768px) {
+    .nav {
+        top: 12%;
+        width: 95%;
+        gap: 8px;
+        padding: 8px 0;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .logo span {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+    .nav .nav-links {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .nav .nav-links li {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .btn {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+    .sign, .login {
+        width: 60px;
+        padding: 6px;
+        font-size: 12px;
+    }
+
+  }
+  
+  /* For small mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .nav {
+        top: 18%;
+        padding: 5px 0;
+        border-radius: 30px;
+    }
+    .logo {
+        font-size: 16px;
+    }
+    .logo span {
+        font-size: 7px;
+    }
+    .nav .nav-links li {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+    .sign, .login {
+        width: 55px;
+        padding: 5px;
+        font-size: 11px;
+    }
+
+  }
+  

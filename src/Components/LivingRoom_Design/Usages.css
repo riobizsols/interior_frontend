@@ -1,0 +1,214 @@
+.book_Usages{
+    background: #111111;
+    margin-top: -130px;
+}
+.book_Usages h1{
+    position: absolute;
+    top: 10%;
+    left: 49%;
+}
+.book_Usages img{
+    max-width: 100%;
+     height:auto;
+     margin-top: 6%;
+     
+ }
+
+ .book_usages_para{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 10px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+.book_usages_para_icon{
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.book_usages_para1{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position:absolute;
+    top: 30%;
+    left: 46.5%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 10px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+   
+}
+
+.book_usages_para2{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top:30%;
+    left: 65%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 12px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.book_usages_para:hover{
+    background-color: #12583581;
+}
+.book_usages_para1:hover{
+    background-color: #12583581;
+}
+.book_usages_para2:hover{
+    background-color: #12583581;
+}
+
+.book_usages_next_p1{
+    position: absolute;
+    top: 98%;
+    left: 86%; /* Adjust position for proper alignment */
+    background-color: #d9d9d91c; /* Semi-transparent background */
+    color: #d5ba94; /* Icon color */
+    padding: 12px; /* Ensure padding makes it a perfect circle */
+    border-radius: 50%; /* Makes the element circular */
+    text-align: center; /* Centers the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    cursor: pointer; 
+}
+
+.book_usages_next_p2{
+    position: absolute;
+     top: 98%;
+     left: 92%; /* Adjust position for proper alignment */
+     background-color: #d9d9d975; /* Semi-transparent background */
+     color: #D5BA94; /* Icon color */
+     padding: 12px; /* Ensure padding makes it a perfect circle */
+     border-radius: 50%; /* Makes the element circular */
+     text-align: center; /* Centers the icon */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+     cursor: pointer;
+ }
+
+ .book_usages_interior{
+
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+ }
+
+ .book_usages_interior1{
+
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+ }
+
+ .book_usages_interior2{
+
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top: 60%;
+    left: 73%;
+    background-color: #ffffff0c;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size:  25px;
+    font-weight: 500;
+    padding: 8px 60px 8px 60px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+ }
+
+ .book_usages_interior:hover{
+    background-color: #12583581;
+}
+.book_usages_interior1:hover{
+    background-color: #12583581;
+}
+.book_usages_interior2:hover{
+    background-color: #12583581;
+}
+
+.book_cost{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:20px;
+}
+
+.book_budget_p{
+    position: absolute;
+    top:75%;
+    left: 25%;
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Georgia;
+}
+.book_budget_amount{
+filter: blur(10px);
+backdrop-filter: blur(20px);
+-webkit-filter: blur(0.1px);
+position: absolute;
+top:82%;
+left:25%;
+font-size: 30px;
+background-color: #11111149;
+font-weight: 400;
+color: rgb(255, 255, 255);
+font-family: Georgia;
+}

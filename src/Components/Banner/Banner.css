@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#banner{
+    position: relative;
+}
+
+.banner_img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner_content{
+    position: absolute;
+    top: 80px;
+    color: whitesmoke;
+    text-align: center;
+    top: 85%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.bh{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.book{
+    padding: 10px;
+    background: #1a1a1aab;
+    border: none;
+    border-radius: 50px;
+    color: #D5BA94;
+    border: 2px white;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+
+/* For tablets and small screens (max-width: 1294px) */
+/* @media (max-width: 1294px) {
+    .banner_content {
+        top: 80%;
+        width: 80%;
+    }
+  } */
+  /* For tablets and small screens (max-width: 1024px) */
+  @media (max-width: 1024px) {
+
+    .banner_content {
+        top: 80%;
+        width: 80%;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 980px) {
+
+
+  }
+  
+  /* For mobile devices (max-width: 768px) */
+  @media (max-width: 768px) {
+
+    .banner_content {
+        top: 70%;
+        width: 90%;
+        font-size: 14px;
+        display: none;
+    }
+
+    .book {
+        width: 100px;
+        padding: 8px;
+    }
+  }
+  
+  /* For small mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+
+    .banner_content {
+        top: 65%;
+        width: 100%;
+        font-size: 12px;
+    }
+    .book {
+        width: 90px;
+        padding: 6px;
+        font-size: 12px;
+    }
+  }
+  

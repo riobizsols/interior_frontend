@@ -1,0 +1,91 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto; /* Reduced margin */
+  padding: 20px; /* Reduced padding */
+  background: #111111;
+  border-radius: 8px; /* Reduced border radius */
+  max-width: 400px; /* Reduced max width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
+}
+
+.contact-form {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-family: 'Arial, sans-serif';
+  font-size: 20px; /* Reduced font size */
+  color: #fff;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.form-group {
+  margin-bottom: 10px; /* Reduced margin */
+  position: relative;
+  text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.react-phone-number-input__input {
+  width: 100%;
+  padding: 8px 10px; /* Reduced padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 12px; /* Reduced font size */
+  color: #fff;
+  background-color: #1f1f1f;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+  font-size: 12px; /* Adjusted placeholder font size */
+}
+
+.whatsapp-group {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced spacing */
+  margin-top: 8px; /* Reduced margin */
+  font-size: 12px; /* Reduced font size */
+}
+
+.whatsapp-group input[type="checkbox"] {
+  width: 20px; /* Reduced checkbox size */
+  height: 12px; /* Reduced checkbox size */
+  cursor: pointer;
+}
+
+.whatsapp-group label {
+  color: #D5BA94;
+  cursor: pointer;
+  font-size: 12px; /* Reduced font size */
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #c6a201;
+  color: #111111;
+  cursor: pointer;
+  margin-top: 10px; /* Reduced margin */
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #a89001;
+}
+
+.contact-form p {
+  font-size: 10px; /* Reduced font size */
+  margin-top: 10px; /* Reduced margin */
+  color: #aaa;
+}
