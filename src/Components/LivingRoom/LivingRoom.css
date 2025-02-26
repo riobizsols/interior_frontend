@@ -1,5 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .interior_designs{
     background-color: #111111;
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
    
 }
 .interior_head_desc{
@@ -94,7 +103,7 @@
     text-align: left;
     justify-self: left;
     color: #acabab;
-    margin-right: 450px; 
+    margin-right: 4px; 
   }
   
   .search_box {

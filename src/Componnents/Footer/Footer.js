@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import dsfffe3 from '../../Assets/dsfffe3.png'
+// import dsfffe3 from '../../Assets/dsfffe3.png'
 import { FaFacebook } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
@@ -22,7 +22,7 @@ const Footer = () => {
       </form>
     </div>
     <div class="water_mark_4">
-    <img src={dsfffe3} alt="dsfffe3" />
+    {/* <img src={dsfffe3} alt="dsfffe3" /> */}
     </div>
   </section>
 

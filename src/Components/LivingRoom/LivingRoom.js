@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../LivingRoom/LivingRoom.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import Header1 from '../../assets/LivHeader.png';
+// import Header1 from '../../assets/LivHeader.png';
 // import Navbar from './Navbar/Navbar';
 import { IoSearch } from "react-icons/io5";
 import Mask1 from '../../assets/Mask group.png';
@@ -51,47 +51,46 @@ import { AiFillCaretDown } from "react-icons/ai";
 const Livingroom = () => {
   
 const designs = [
-  { id: 1, image: Mask16, category: 'Modern',  smallImages: [Mask4, Mask7, Mask10, Mask13 ] },
-  { id: 2, image: Mask2, category: 'Classic', smallImages: [Mask6, Mask8, Mask11, Mask14] },
-  { id: 3, image: Mask3, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32] },
-  { id: 4, image: Mask4, category: 'Modern', smallImages: [Mask25, Mask28, Mask31, Mask34 ] },
-  { id: 5, image: Mask6, category: 'Classic', smallImages: [Mask35, Mask8, Mask11, Mask14] },
-  { id: 6, image: Mask12, category: 'Trendy', smallImages: [Mask9, Mask18, Mask15, Mask18]  },
-  { id: 7, image: Mask7, category: 'Modern',  smallImages: [Mask4, Mask7, Mask10, Mask13 ] },
-  { id: 8, image: Mask8, category: 'Classic', smallImages: [Mask17, Mask20, Mask23, Mask26 ] },
-  { id: 9, image: Mask9, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32] },
-  { id: 10, image: Mask10, category: 'Modern',  smallImages: [Mask13, Mask16, Mask19, Mask22 ] },
-  { id: 11, image: Mask11, category: 'Classic',  smallImages: [Mask17, Mask20, Mask23, Mask26 ] },
-  { id: 12, image: Mask12, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 13, image: Mask13, category: 'Modern',  smallImages: [Mask25, Mask28, Mask31, Mask34 ] },
-  { id: 14, image: Mask14, category: 'Classic',  smallImages: [Mask17, Mask20, Mask23, Mask26 ] },
-  { id: 15, image: Mask15, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 16, image: Mask16, category: 'Modern',  smallImages: [Mask4, Mask7, Mask10, Mask13 ] },
-  { id: 17, image: Mask17, category: 'Classic',  smallImages:  [Mask11, Mask14, Mask26, Mask23 ] },
-  { id: 18, image: Mask18, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 19, image: Mask19, category: 'Modern',  smallImages: [Mask13, Mask16, Mask19, Mask22 ] },
-  { id: 20, image: Mask20, category: 'Classic',  smallImages:  [Mask32, Mask29, Mask26, Mask23 ]  },
-  { id: 21, image: Mask21, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 22, image: Mask22, category: 'Modern',  smallImages: [Mask4, Mask7, Mask10, Mask13 ] },
-  { id: 23, image: Mask23, category: 'Classic',  smallImages: [Mask17, Mask20, Mask29, Mask26 ] },
-  { id: 24, image: Mask24, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 25, image: Mask25, category: 'Modern',  smallImages: [Mask13, Mask16, Mask19, Mask22 ]},
-  { id: 26, image: Mask26, category: 'Classic',  smallImages:  [Mask32, Mask29, Mask26, Mask23 ]  },
-  { id: 27, image: Mask27, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 28, image: Mask28, category: 'Modern',  smallImages: [Mask25, Mask28, Mask31, Mask34 ] },
-  { id: 29, image: Mask29, category: 'Classic',  smallImages: [Mask17, Mask20, Mask23, Mask26 ] },
-  { id: 30, image: Mask30, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 31, image: Mask31, category: 'Modern',  smallImages: [Mask4, Mask7, Mask10, Mask13 ] },
-  { id: 32, image: Mask32, category: 'Classic',  smallImages: [Mask23, Mask20, Mask17, Mask14 ] },
-  { id: 33, image: Mask33, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
-  { id: 34, image: Mask34, category: 'Modern',  smallImages: [Mask25, Mask28, Mask31, Mask34 ] },
-  { id: 35, image: Mask35, category: 'Classic',  smallImages: [Mask32, Mask29, Mask26, Mask23 ] },
-  { id: 36, image: Mask36, category: 'Trendy', smallImages: [Mask9, Mask12, Mask15, Mask32]  },
- 
+  { id: 1, image: Mask16, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 2, image: Mask2, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,] },
+  { id: 3, image: Mask3, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 4, image: Mask4, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 5, image: Mask6, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 6, image: Mask12, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 7, image: Mask7, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 8, image: Mask8, category: 'Classic', RelatedPage: 'Livingroom', smallImages: Mask1, Mask2, Mask3,  },
+  { id: 9, image: Mask9, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 10, image: Mask10, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 11, image: Mask11, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 12, image: Mask12, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 13, image: Mask13, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 14, image: Mask14, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 15, image: Mask15, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 16, image: Mask16, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 17, image: Mask17, category: 'Classic', RelatedPage: 'Livingroom', smallImages:  [Mask1, Mask2, Mask3,  ] },
+  { id: 18, image: Mask18, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3]  },
+  { id: 19, image: Mask19, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 20, image: Mask20, category: 'Classic', RelatedPage: 'Livingroom', smallImages:  [Mask1, Mask2, Mask3,  ]  },
+  { id: 21, image: Mask21, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 22, image: Mask22, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 23, image: Mask23, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 24, image: Mask24, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 25, image: Mask25, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ]},
+  { id: 26, image: Mask26, category: 'Classic', RelatedPage: 'Livingroom', smallImages:  [Mask1, Mask2, Mask3, ]  },
+  { id: 27, image: Mask27, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 28, image: Mask28, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 29, image: Mask29, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 30, image: Mask30, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 31, image: Mask31, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 32, image: Mask32, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 33, image: Mask33, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  },
+  { id: 34, image: Mask34, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 35, image: Mask35, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,  ] },
+  { id: 36, image: Mask36, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  }, 
 ];
 
   // const handleImageClick = (id) => {
-  //   navigate(`/livingroom-design/${id}`);
+  //   navigate(`/design/${id}`);
   // };
 
   const [filter, setFilter] = useState('Filter'); // Dropdown filter state
@@ -173,8 +172,8 @@ const designs = [
             filteredDesigns.map((design) => (
               <Link
                 key={design.id}
-                to="/livingroom-design"
-                state={{ image: design.image, category: design.category, smallImages: design.smallImages, }}
+                to="/design"
+                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, }}
               >
                 <div className="livingroom_design_item">
                   <h4 className="overlay_text">{design.category}</h4>

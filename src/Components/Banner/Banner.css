@@ -41,6 +41,15 @@
     margin: 20px 0;
 }
 
+.breadcrumb-link {
+    color: #D5BA94;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
 
 /* For tablets and small screens (max-width: 1294px) */
 /* @media (max-width: 1294px) {
