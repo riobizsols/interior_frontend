@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import assets_banner from '../../assets/Assets image1.png'
+// import assets_banner from '../../assets/Assets image1.png'
 import { Link } from 'react-router-dom'
 import "../AssetsPage/Assets.js"
 import '../AssetsPage/Assets.css'
@@ -41,20 +41,6 @@ const Assets = () => {
 
   return (
     <div>
-            {/* <div id="banner">
-            <img className='banner_img' src={assets_banner} alt="main_banner" />
-
-            <Navbar/>
-            <div className="assets_banner_content">
-                <p>Home - <span>Assets</span></p>
-                <h1 className="abh">Assets</h1>
-            </div>
-            </div> */}
-
-{/* <Banner page="assets" /> */}
-
-    
-
      <div className="assets-container">
      <div className="carousel-header">
         <div className="carousel_head1">

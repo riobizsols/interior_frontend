@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import dsfffe3 from '../../assets/dsfffe3.png'
 import { FaFacebook } from "react-icons/fa";
@@ -7,24 +7,77 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubscribe = async () => {
+    if (!validateEmail(email)) {
+      setMessage("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5001/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to subscribe. Please try again later.");
+      }
+
+      const data = await response.json();
+      setMessage("Thank you for subscribing!");
+      alert("Thank you for subscribing")
+      console.log("Response from server:", data);
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("There was an error with your subscription.");
+      alert("There was an error with your subscription.")
+    }
+  };
   return (
     <div>
-    <section class="support-section">
-    <div class="support-content">
-      <p class="support-title">Our Support</p>
-      <h1 class="main-title">Lorem ipsum is dolor sit amet, sit amet</h1>
-      <p class="description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.
-      </p>
-      <form class="subscribe-form">
-        <input type="text" class="input-field" placeholder="Enter your email" />
-        <button type="button" class="subscribe-button">Subscribe</button>
-      </form>
-    </div>
-    <div class="water_mark_4">
-    <img src={dsfffe3} alt="dsfffe3" />
-    </div>
-  </section>
+  <section className="support-section">
+      <div className="support-content">
+        <p className="support-title">Our Support</p>
+        <h1 className="main-title">Ready to transform your space?</h1>
+        <p className="description">
+          Submit your email to begin your customized design journey today.
+        </p>
+        <form
+          className="subscribe-form"
+          onSubmit={(e) => e.preventDefault()} // Prevents form reload
+        >
+          <input
+            type="text"
+            className="input-field"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            type="button"
+            className="subscribe-button"
+            onClick={handleSubscribe}
+          >
+            Subscribe
+          </button>
+        </form>
+        {message && <p className="message">{message}</p>}
+      </div>
+      <div className="water_mark_4">
+        <img src={dsfffe3} alt="watermark" />
+      </div>
+    </section>
 
     <footer className="footer">
       <div className="footer-container">
@@ -78,7 +131,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>All Right Reserved © 2024 by <Link to="#">RIO BizSols PVT LTD</Link></p>
+        <p>All Right Reserved © 2025 by <Link to="#">RIO BizSols PVT LTD</Link></p>
         <p><Link to="#">Privacy Policy</Link> | <Link to="#">Terms And Condition</Link></p>
       </div>
     </footer>

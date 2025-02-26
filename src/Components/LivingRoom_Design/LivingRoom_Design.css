@@ -1,23 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 .liv_room_desing_img{
     display: grid;
-    grid-template-columns: auto auto;
-    gap:0;
-    margin-top: 40px;
+    grid-template-columns: 50% 50%;
+    gap:1%;
+    margin-top: 60px;
     /* max-width: 100%; */
     margin-left: 80px;
 }
 
+.interior_designs_session{
+    background-color: #111111;
+    width: 100%;
+    height: auto;
+    padding: 63px 20px;
+   
+}
+
+.design_main_session img{
+    width: 100%;
+}
+
 .liv_room_desing_subimg{
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
+    grid-template-columns: auto auto auto;
+    gap:5px;
 
 }
 
+.design_sub_session{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_session{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.icon_session .icons img{
+    margin: 10px auto;
+}
+
+.double_btn{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 20px;
+}
+
 .liv_room_button{
-    margin-top: 50px;
-    width: 47%;
-    padding: 12px 37px 12px 12px; 
+    padding: 12px 37px; 
+    border: 0.1px solid #ffffff3d;
+    border-radius: 64px;
+    appearance: none;
+    font-family: Montserrat; 
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #D5BA94;
+    color: white;
+    text-align: center;
+}
+
+.heart{
+    margin-right: 15px;
+}
+
+.wishlist_btn{
+    padding: 12px 37px; 
     border: 0.1px solid #ffffff3d;
     border-radius: 64px;
     appearance: none;
@@ -27,5 +83,32 @@
     cursor: pointer;
     background-color: #ffffff0c;
     color: #D5BA94;
+    justify-content: center;
 }
 
+.related_img p{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+.design-social p{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+.design-social-icons{
+    display: flex;
+}
+.design-social-icons a{
+    color: #D5BA94;
+    margin-right: 20px;
+    font-size: 33px;
+}
+
+.see_more_button{
+    display: flex;
+    margin-top: 20px;
+    justify-content: end;
+
+}

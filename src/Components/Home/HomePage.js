@@ -1,26 +1,48 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../Home/HomePage.css'
 import mask_img_1 from '../../assets/Mask group (1).png'
 import mask_img_2 from '../../assets/Mask group (2).png'
 import mask_img_3 from '../../assets/Mask group (3).png'
 import mask_img from '../../assets/Mask group.png'
-import home_banner2 from '../../assets/Header living image 1.png'
 import image_18 from '../../assets/image 18.png'
 import image_19 from '../../assets/image 19.png'
 import dsfffe1 from '../../assets/dsfffe1.png'
 import dsfffe2 from '../../assets/dsfffe2.png'
-import group_5 from '../../assets/Group5.png'
 import our_process_1 from '../../assets/our-process-1.png'
 import our_process_2 from '../../assets/our-process-2.png'
 import our_process_3 from '../../assets/our-process-3.png'
-import back_img from '../../assets/background image3.png'
-import back_img_1 from '../../assets/BedRoom 1.png'
-// import back_img_2 from '../../assets/.png'
-import back_img_3 from '../../assets/Kitchen 1.png'
+import livingroom_1 from '../../assets/Homepage_images/Ideas/Living Room/1.jpg'
+import livingroom_2 from '../../assets/Homepage_images/Ideas/Living Room/2.jpeg'
+import livingroom_3 from '../../assets/Homepage_images/Ideas/Living Room/3.jpg'
+import livingroom_4 from '../../assets/Homepage_images/Ideas/Living Room/4.jpg'
+import livingroom_5 from '../../assets/Homepage_images/Ideas/Living Room/5.jpg'
+import bedroom_1 from '../../assets/Homepage_images/Ideas/Bed Room/1.jpeg'
+import bedroom_2 from '../../assets/Homepage_images/Ideas/Bed Room/2.jpg'
+import bedroom_3 from '../../assets/Homepage_images/Ideas/Bed Room/3.jpg'
+import bedroom_4 from '../../assets/Homepage_images/Ideas/Bed Room/4.jpg'
+import bedroom_5 from '../../assets/Homepage_images/Ideas/Bed Room/5.jpg'
+import bedroom_6 from '../../assets/Homepage_images/Ideas/Bed Room/6.jpg'
+import masterbedroom_1 from '../../assets/Homepage_images/Ideas/Master Bed Room/1.jpg'
+import masterbedroom_2 from '../../assets/Homepage_images/Ideas/Master Bed Room/2.jpg'
+import masterbedroom_3 from '../../assets/Homepage_images/Ideas/Master Bed Room/3.jpg'
+import masterbedroom_4 from '../../assets/Homepage_images/Ideas/Master Bed Room/4.jpg'
+import masterbedroom_5 from '../../assets/Homepage_images/Ideas/Master Bed Room/5.jpg'
+import masterbedroom_6 from '../../assets/Homepage_images/Ideas/Master Bed Room/6.jpg'
+import kitchen_1 from '../../assets/Homepage_images/Ideas/Kitchen/1.jpg'
+import kitchen_2 from '../../assets/Homepage_images/Ideas/Kitchen/2.jpg'
+import kitchen_3 from '../../assets/Homepage_images/Ideas/Kitchen/3.jpg'
+import kitchen_4 from '../../assets/Homepage_images/Ideas/Kitchen/4.jpg'
+import kitchen_5 from '../../assets/Homepage_images/Ideas/Kitchen/5.jpg'
+import kitchen_6 from '../../assets/Homepage_images/Ideas/Kitchen/6.jpg'
 import isomatric_home from '../../assets/isometric-house.png'
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import dvdsv from '../../assets/dvdsv 1.png'
+import isomatric_home_1 from '../../assets/isometric-house_1.png'
+import isomatric_home_2 from '../../assets/isometric-house_2.png'
+import interior_livingroom from '../../assets/interior_living.png'
+import interior_kitchen from '../../assets/interior_kitchen.png'
+import interior_homeoffice from '../../assets/interior_hoffice.png'
+import interior_bedroom from '../../assets/interior_bedroom.png'
+import interior_bathroom from '../../assets/interior_bath.png'
+import interior_assets from '../../assets/interior_assets.png'
 import image1 from "../../assets/dsvfv.png";
 import image2 from "../../assets/vfdsvf.png";
 import image3 from "../../assets/vyhgv.png";
@@ -39,12 +61,11 @@ import image15 from "../../assets/pngegg1.png"
 import image16 from "../../assets/pngwing.com1.png"
 import image17 from "../../assets/scsac1.png"
 import image18 from "../../assets/vdsdvd1.png"
+import { useNavigate } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom'
-import Footer from '../Footer/Footer'
 import Counter from "../Pages/Counter";
-import Navbar from '../Navbar/Navbar'
-import Banner from '../Banner/Banner'
+
 
 
 const HomePage = () => {
@@ -52,8 +73,37 @@ const HomePage = () => {
   const imagess = [image9, image10, image11, image12, image13, image14, image15, image16, image17, image18];
   const [currentIndex, setCurrentIndex] = useState(2); // Center image
   const [activeStep, setActiveStep] = useState(1);
-  const [currentRoom, setCurrentRoom] = useState("livingRoom");
-  const [currentImage, setCurrentImage] = useState(back_img);
+  const [hoveredFeature, setHoveredFeature] = useState(0); // Default to "Living Room"
+  const navigate = useNavigate();
+  const [currentItem, setCurrentItem] = useState(0);
+  const [currentRoom, setCurrentRoom] = useState("LivingRoom");
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Start image auto-scrolling when a button is clicked
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % roomImages[currentRoom].length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [currentRoom]); // Runs when currentRoom changes
+
+  const handleButtonClick = (room) => {
+    if (currentRoom !== room) {
+      setCurrentRoom(room);
+      setImageIndex(0); // Reset index when switching rooms
+    }
+  };
+
+  const handleNext1 = () => {
+    setCurrentItem((prevIndex) => (prevIndex + 1) % feedbacks.length);
+  };
+
+  const handlePrev1 = () => {
+    setCurrentItem((prevItem) =>
+      prevItem === 0 ? feedbacks.length - 1 : prevItem - 1
+    );
+  };
 
 
   const handlePrev = () => {
@@ -74,13 +124,13 @@ const HomePage = () => {
   };
 
   
-    // Map each button to its corresponding image
-    const roomImages = {
-      livingRoom: back_img,
-      bedRoom: back_img_1,
-      masterBedroom: back_img_1,
-      kitchen: back_img_3,
-    };
+     // Define multiple images for each room
+  const roomImages = {
+    LivingRoom: [livingroom_1,livingroom_2,livingroom_3,livingroom_4,livingroom_5],
+    BedRoom: [bedroom_1,bedroom_2,bedroom_3,bedroom_4,bedroom_5,bedroom_6],
+    MasterBedroom: [masterbedroom_1,masterbedroom_2,masterbedroom_3,masterbedroom_4,masterbedroom_5,masterbedroom_6],
+    Kitchen: [kitchen_1,kitchen_2,kitchen_3,kitchen_4,kitchen_5,kitchen_6],
+  };
 
 
   // Images Array
@@ -106,124 +156,128 @@ const HomePage = () => {
     { src: image8, date:"18th Feb 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
   ];
 
-
-
-
-  //  // Scroll Left with Loop Logic
-  //  const scrollLeft = () => {
-  //   const carousel = carouselRef.current;
-  //   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-
-  //   if (carousel.scrollLeft === 0) {
-  //     // Jump to the end
-  //     carousel.scrollLeft = maxScrollLeft;
-  //   } else {
-  //     // Scroll left by one image width
-  //     carousel.scrollBy({ left: -300, behavior: "smooth" });
-  //   }
-  // };
-
-  // // Scroll Right with Loop Logic
-  // const scrollRight = () => {
-  //   const carousel = carouselRef.current;
-  //   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-
-  //   if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
-  //     // Jump to the start
-  //     carousel.scrollLeft = 0;
-  //   } else {
-  //     // Scroll right by one image width
-  //     carousel.scrollBy({ left: 300, behavior: "smooth" });
-  //   }
-  // };
-  //  const scrollLeft2 = () => {
-  //   const carousel = carouselRef2.current;
-  //   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-
-  //   if (carousel.scrollLeft === 0) {
-  //     // Jump to the end
-  //     carousel.scrollLeft = maxScrollLeft;
-  //   } else {
-  //     // Scroll left by one image width
-  //     carousel.scrollBy({ left: -300, behavior: "smooth" });
-  //   }
-  // };
-
-  // // Scroll Right with Loop Logic
-  // const scrollRight2 = () => {
-  //   const carousel = carouselRef2.current;
-  //   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-
-  //   if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
-  //     // Jump to the start
-  //     carousel.scrollLeft = 0;
-  //   } else {
-  //     // Scroll right by one image width
-  //     carousel.scrollBy({ left: 300, behavior: "smooth" });
-  //   }
-  // };
-
-  //  // Scroll Left with Loop
-  //  const scrollLeft3 = () => {
-  //   if (carouselRef3.current.scrollLeft === 0) {
-  //     carouselRef3.current.scrollLeft =
-  //       carouselRef3.current.scrollWidth - carouselRef3.current.clientWidth;
-  //   } else {
-  //     carouselRef3.current.scrollBy({ left: -300, behavior: "smooth" });
-  //   }
-  // };
-
-  // // Scroll Right with Loop
-  // const scrollRight3 = () => {
-  //   if (
-  //     carouselRef3.current.scrollLeft + carouselRef3.current.clientWidth >=
-  //     carouselRef3.current.scrollWidth
-  //   ) {
-  //     carouselRef3.current.scrollLeft = 0;
-  //   } else {
-  //     carouselRef3.current.scrollBy({ left: 300, behavior: "smooth" });
-  //   }
-  // };
+  const featuresData = [
+    {
+      title: "Living Room",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_livingroom,
+      page: "#",
+    },
+    {
+      title: "Kitchen",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_kitchen,
+      page: "#",
+    },
+    {
+      title: "Bed Room",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_bedroom,
+      page: "#",
+    },
+    {
+      title: "Bath Room",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_bathroom,
+      page: "#",
+    },
+    {
+      title: "Home Office",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_homeoffice,
+      page: "#",
+    },
+    {
+      title: "Assets",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+      image:interior_assets,
+      page: "/assets",
+    },
+  ];
 
   const steps = [
     {
       id: 1,
       title: "Step 1",
       heading: "Discover",
-      content:
-        "We begin by understanding your vision and lifestyle, collaborating to explore ideas and ensure every detail reflects your unique style.",
+      content:"We begin by understanding your vision and lifestyle, collaborating to explore ideas and ensure every detail reflects your unique style.",
       image:our_process_1 , // Replace with actual image URLs or imports
     },
     {
       id: 2,
       title: "Step 2",
-      heading: "Get Free Estimate",
-      content: "Once the concept is clear, we provide a transparent, no-hidden-charge estimate to help you plan effectively.",
+      heading: "Design",
+      content: "Our designers create functional, stunning concepts, tailoring everything from layouts to decor for a cohesive result.",
       image:our_process_2,
     },
     {
       id: 3,
       title: "Step 3",
-      heading: "Design",
-      content: "Our designers create functional, stunning concepts, tailoring everything from layouts to decor for a cohesive result.",
+      heading: "Implement",
+      content: "We bring designs to life with expert precision, ensuring the final outcome meets your expectations perfectly.",
       image:our_process_3,
     },
-    {
-      id: 4,
-      title: "Step 4",
-      heading: " Implement",
-      content: "We bring designs to life with expert precision, ensuring the final outcome meets your expectations perfectly.",
-      image:group_5,
-    },
   ];
+
+  const feedbacks = [
+    {
+      feedback: [
+        "Working with Interior Wonders Design was such an amazing experience for us! Right from the beginning, their team took the time to really understand what we wanted and made sure our ideas were part of the plan. It felt like they were as excited about our living room as we were!",
+        "What we loved the most was how they paid attention to even the tiniest details. They didn’t just bring our vision to life – they made it better with their creative suggestions. They kept us in the loop every step of the way, which made us feel super confident and involved in the process.",
+        "The final result? A living room that’s not just beautiful but also feels like us. It’s cozy, stylish, and perfect for everything from family time to hosting friends. We honestly couldn’t be happier with how it turned out! If you’re thinking about giving your space a makeover, we can’t recommend Interior Wonders Design enough. They went above and beyond, and we’re so glad we chose them",
+      ],
+      clientDetails:"Anand and Sunita's Feedback",
+      clientLogo:"ClientLogo 1",
+      clientName: "- Anand & Sunita",
+      companyName: "Company One",
+      date:"20th March 2024",
+      image: isomatric_home, // Replace with actual image path
+    },
+    {
+      feedback: [
+        "We couldn't have asked for a better experience than working with Interior Wonders Design! From the initial consultation, their team was professional, patient, and genuinely attentive to our needs.", 
+         "They helped us envision a dining area that was both functional and stylish, blending our taste with practical design solutions.One of the highlights was their ability to incorporate modern design trends while maintaining the warmth and comfort we desired.",
+         "The entire team went above and beyond to make sure the process was smooth, from start to finish. What stood out was their commitment to ensuring the smallest details were perfect. Every piece of furniture and decor felt carefully chosen, adding to the overall harmony of the space. We couldn't believe how well they captured our vision, and the final look truly exceeded our expectations. If you want a team that listens to your ideas and transforms them into something beyond your imagination, Interior Wonders Design is your go-to choice. We’re so glad we trusted them with our project!",
+      ],
+      clientDetails:"Ravi and Priya’s Feedback",
+      clientLogo:"ClientLogo 2",
+      clientName: " Ravi & Priya",
+      companyName: "Company Two",
+      date:"10th June 2024",
+      image: isomatric_home_1, // Replace with actual image path
+    },
+    {
+      feedback: [
+        "Partnering with Interior Wonders Design for our office redesign was one of the best decisions we made as a company. Their team understood our need for a professional, yet vibrant work environment that encourages collaboration and creativity.",
+        "The process was seamless – from the initial concept to the final installation. We were particularly impressed by how they seamlessly incorporated our brand’s colors and aesthetics into the space while maintaining functionality. The ergonomic designs and creative workspaces they suggested have already boosted employee morale and productivity.",
+        "Our employees now love the new office space, and clients are equally impressed when they visit. Interior Wonders Design not only brought our vision to life but elevated it in ways we hadn’t even considered. We highly recommend their services to any business looking to enhance their office space.",
+      ],
+      clientDetails:"Corporate Client: Tech Innovators Inc.",
+      clientLogo:"ClientLogo 3",
+      clientName: "Tech Innovators Inc",
+      companyName: "Company Three",
+      date:"16th Dec 2024",
+      image: isomatric_home_2, // Replace with actual image path
+    },
+    
+  ];
+
+  const currentFeedback = feedbacks[currentItem];
+
   // const handleStepClick = (stepId) => {
   //   setActiveStep(stepId);
   // };
 
-  const handleButtonClick = (room) => {
-    setCurrentRoom(room);
-    setCurrentImage(roomImages[room]);
+  const handleButtonClickPage = (page) => {
+    navigate(page);
   };
+
 
 
   return (
@@ -257,7 +311,9 @@ const HomePage = () => {
             <p>Innovative Designs Created</p>
           </div>
         </div>
+        <Link to="/assets">
         <button className="contact-button">Contact us</button>
+        </Link>
       </div>
       <div className="about-us-right">
         <div className="image-grid">
@@ -305,138 +361,74 @@ const HomePage = () => {
         <div className="water_mark_2">
         <img src={image_19} alt="image_19" />
       </div>
-        <button className="contact-button">Book a Free Consultation</button>
+        <button 
+        onClick={() => handleButtonClickPage(featuresData.page)}
+        className="contact-button">Book a Free Consultation</button>
       </div>
     </div>
 
-   
+
 <div className="room-selector-container">
       <div className="room-image">
-        <img src={currentImage} alt="Room" />
+        <img src={roomImages[currentRoom][imageIndex]} alt="Room" />
       </div>
       <div className="room-buttons">
-        <button
-          className={`room-button ${currentRoom === "livingRoom" ? "active" : ""}`}
-          onClick={() => handleButtonClick("livingRoom")}
-        >
-          Living Room
-        </button>
-        <button
-          className={`room-button ${currentRoom === "bedRoom" ? "active" : ""}`}
-          onClick={() => handleButtonClick("bedRoom")}
-        >
-          Bed Room
-        </button>
-        <button
-          className={`room-button ${currentRoom === "masterBedroom" ? "active" : ""}`}
-          onClick={() => handleButtonClick("masterBedroom")}
-        >
-          Master Bed Room
-        </button>
-        <button
-          className={`room-button ${currentRoom === "kitchen" ? "active" : ""}`}
-          onClick={() => handleButtonClick("kitchen")}
-        >
-          Kitchen
-        </button>
+        {Object.keys(roomImages).map((room) => (
+          <button
+            key={room}
+            className={`room-button ${currentRoom === room ? "active" : ""}`}
+            onClick={() => handleButtonClick(room)}
+          >
+            {room.replace(/([A-Z])/g, " $1").trim()}
+          </button>
+        ))}
       </div>
     </div>
 
-    <div className="features-container">
+    
+<div className="features-container">
       <div className="features-text">
         <h2>Interior Designs</h2>
-        <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+        <h1>Transform Your Space with Inspired Interior Designs</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus 
-          aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, 
-          nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, 
-          ultrices eget risus.
+        Discover a world of possibilities for your home. From cozy living rooms to stylish home offices, we craft personalized designs tailored to your unique taste and needs. Explore each space to learn how we can turn your vision into reality.
         </p>
         <div className="features-list">
-          {[...Array(6)].map((_, index) => (
-            <div key={index} className="feature-item">
-              <div className="icon">⭐</div>
+          {featuresData.map((feature, index) => (
+            <div
+              key={index}
+              className={`feature-item ${
+                hoveredFeature === index ? "hovered" : ""
+              } ${index === 0 && hoveredFeature === 0 ? "default-hovered" : ""}`}
+              onMouseEnter={() => setHoveredFeature(index)}
+              onMouseLeave={() => setHoveredFeature(0)} // Revert to default hover
+            >
               <div>
-                <h3>Lorem ipsum is dolor</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus 
-                  aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, 
-                  nec ultricies arcu nisl.
-                </p>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
               </div>
+              {hoveredFeature === index && (
+                <button 
+                onClick={() => handleButtonClickPage(feature.page)}
+                className="continue-button">Continue</button>
+              )}
             </div>
           ))}
         </div>
       </div>
       <div className="features-image">
         <img
-          src={dvdsv}
+          src={featuresData[hoveredFeature].image}
           alt="Feature Illustration"
         />
       </div>
     </div>
 
-    <div className="projects-container">
-      <div className="main_text">
-      <h2>Project</h2>
-      <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
-      </div>
-      <div className="carousel-container">
-      {/* Left Arrow */}
-      {/* <button className="scroll-button left" onClick={scrollLeft}>
-      <IoIosArrowBack />
-      </button> */}
-      
-      <div className="carousel">
-        {images.map((img, index) => (
-          <div key={index} className="carousel-item">
-            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image" />
-            <div className="image-text">
-              <h3>{img.title}</h3>
-              <p>{img.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Right Arrow */}
-      {/* <button className="scroll-button right" onClick={scrollRight}>
-      <IoIosArrowForward />
-      </button> */}
-    </div>
-
-      <div className="carousel-container">
-      {/* Left Arrow */}
-      {/* <button className="scroll-button left" onClick={scrollLeft2}>
-      <IoIosArrowBack />
-      </button> */}
-      
-      <div className="carousel_1" >
-        {images.map((img, index) => (
-          <div key={index} className="carousel-item_1">
-            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image_1" />
-            <div className="image-text">
-              <h3>{img.title}</h3>
-              <p>{img.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Right Arrow */}
-      {/* <button className="scroll-button right" onClick={scrollRight2}>
-      <IoIosArrowForward />
-      </button> */}
-    </div>
-    <div className="view_btn">
-      <button className="view-all-btn">View All Projects</button>
-      </div>
-    </div>
 
     <div className="carousel-container-new">
       <div className="carousel-header">
         <div className="carousel_head1">
-        <h2>Project</h2>
+        <h2>Assets</h2>
         <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
         </div>
         <div className="carousel_para">
@@ -447,19 +439,6 @@ const HomePage = () => {
         </p>
         </div>
       </div>
-
-      {/* <div className='project_product'>
-      <div className="project_product1">
-        <img src={image9} alt="" width={350} height={200} style={{marginTop:170}}/>
-      </div>
-      <div className="project_product1">
-      <img src={image10} alt="" width={400} height={400} />
-      </div>
-      <div className="project_product1">
-      <img src={image11} alt="" width={300} height={200} style={{marginTop:170}}/>
-      </div>
-      
-    </div> */}
 
       <div className="carousel-container-assets">
       <button className="carousel-btn-assets left-btn-assets" onClick={handlePrev}>
@@ -493,9 +472,6 @@ const HomePage = () => {
         &#8594;
       </button>
     </div>
-
-
-
       {/* <div className="carousel-wrapper">
         <button className="carousel-btn left-btn" onClick={scrollLeft3}>
           &#8249;
@@ -512,58 +488,96 @@ const HomePage = () => {
         </button>
       </div> */}
       <button className="view-assets-btn">View All Assets</button>
+      <hr className='assets_split' />
     </div>
 
-    <div className="template-container">
-      <div className="content-section">
-        <h3 className="project-title">Project</h3>
-        <h1 className="main-heading">Lorem ipsum is dolor sit amet, sit amet</h1>
-        <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor
-          nulla commodo dui, nec ultricies arcu nisi tristique eros. Morbi eros
-          est, pulvinar eget ornare ac, ultricies eget risus.
-        </p>
-        <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor
-          nulla commodo dui, nec ultricies arcu nisi tristique eros. Morbi eros
-          est, pulvinar eget ornare ac, ultricies eget risus.
-        </p>
-        <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor
-          nulla commodo dui, nec ultricies arcu nisi tristique eros. Morbi eros
-          est, pulvinar eget ornare ac, ultricies eget risus.
-        </p>
-        <div className="client-logo-section">
-          <h3>Client Logo</h3>
-          <p className="client-name">Lorem ipsum is dolor</p>
-          <p className="company-name">Company Name</p>
-          <button className="view-clients-btn">View All Our Clients</button>
-        </div>
+    {/* <div className="projects-container">
+      <div className="main_text">
+      <h2>Project</h2>
+      <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
       </div>
-     
+      <div className="carousel-container">
+      <div className="carousel">
+        {images.map((img, index) => (
+          <div key={index} className="carousel-item">
+            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image" />
+            <div className="image-text">
+              <h3>{img.title}</h3>
+              <p>{img.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+      <div className="carousel-container">
+      <div className="carousel_1" >
+        {images.map((img, index) => (
+          <div key={index} className="carousel-item_1">
+            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image_1" />
+            <div className="image-text">
+              <h3>{img.title}</h3>
+              <p>{img.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="view_btn">
+      <button className="view-all-btn">View All Projects</button>
+      </div>
+    </div> */}
+
+<div className="template-container">
+      <div className="content-section">
+        {/* Feedback Content */}
+        <h3 className="project-title">Our Clients Feedback</h3>
+        <h1 className="main-heading">{currentFeedback.clientDetails}</h1>
+        {currentFeedback.feedback.map((paragraph, index) => (
+          <p className="description" key={index}>
+            {paragraph}
+          </p>
+        ))}
+
+        {/* Client Information */}
+        <div className="client-logo-section">
+          <h3>{currentFeedback.clientLogo}</h3>
+          <p className="client-name">{currentFeedback.clientName}</p>
+          <p className="company-name">{currentFeedback.companyName}</p>
+          {/* <button className="view-clients-btn">View All Our Clients</button> */}
+        </div>
+
+         {/* Arrow Buttons */}
+      <div className="arrow-buttons">
+        <button className="arrow-btn left-arrow" onClick={handlePrev1}>
+          &#8249;
+        </button>
+        <button className="arrow-btn right-arrow" onClick={handleNext1}>
+          &#8250;
+        </button>
+      </div>
+      </div>
+
+      {/* Feedback Image */}
       <div className="image-section">
+        <p className='feedback_date'>{currentFeedback.date}</p>
         <img
-          src={isomatric_home}
-          alt="Project"
+          src={currentFeedback.image}
+          alt="Client Feedback"
           className="project-image"
         />
       </div>
+
+      {/* water mark */}
       <div className="water_mark_3">
         <img className='small' src={dsfffe1} alt="dsfffe1" />
         <img className='big' src={dsfffe2} alt="dsfffe2" />
         </div>
-      <div className="arrow-buttons">
-        <button className="arrow-btn left-arrow">&#8249;</button>
-        <button className="arrow-btn right-arrow">&#8250;</button>
-      </div>
     </div>
 
     <div className="projects-container-2">
       <div className="main_text">
-      <h2>Project</h2>
+      <h2>Blogs</h2>
       <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
       </div>
       <div className="carousel-container">
@@ -594,11 +608,9 @@ const HomePage = () => {
     </div>
 
     <div className="view_btn">
-      <button className="view-all-btn">View All Projects</button>
+      <button className="view-all-btn">View All Blogs</button>
       </div>
     </div>
-
-    <Footer/>
 
     </div>
   )
