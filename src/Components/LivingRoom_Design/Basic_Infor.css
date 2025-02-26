@@ -1,6 +1,6 @@
 .book_header{
     background: #111111;
-  margin-top: -130px;
+ height: auto;
 }
 .book_header h1{
     position: absolute;
@@ -33,10 +33,6 @@
     filter: blur(10px);
     backdrop-filter: blur(20px);
     -webkit-filter: blur(0.1px);
-    position: absolute;
-    top: 38%;
-    left: 30%;
-    background-color: #ffffff0c;
     color: #ffffff;
     font-family: Montserrat;
     font-size:  25px;
@@ -45,6 +41,10 @@
     border: 0.1px solid #ffffff3d;
     border-radius: 30px;
     cursor: pointer;
+    flex: 1;
+    transition: "0.3s";
+    
+    
     
 }
 .book_house_sele{
@@ -64,7 +64,7 @@
    
 }
 
-.book_house_para:hover{
+/* .book_house_para:hover{
     background-color: #12583581;
 }
 .book_house_para1:hover{
@@ -72,7 +72,7 @@
 }
 .book_house_para2:hover{
     background-color: #12583581;
-}
+} */
 .book_house_para1{
     filter: blur(10px);
     backdrop-filter: blur(20px);
@@ -80,7 +80,7 @@
     position:absolute;
     top: 38%;
     left: 49%;
-    background-color: #ffffff0c;
+    
     color: #ffffff;
     font-family: Montserrat;
     font-size:  25px;
@@ -261,14 +261,7 @@
 }
 
 .book_next_p1{
-    /* position: absolute;
-    top: 98%;
-    left: 89%;
-    background-color: #d9d9d91c;
-    color:#d5ba9434;
-    padding: 10px;
-    opacity: 10px;
-    border-radius: 120px; */
+   
 
     position: absolute;
     top: 98%;

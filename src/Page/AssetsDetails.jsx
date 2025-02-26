@@ -1,32 +1,33 @@
 import React, { useState, useEffect} from 'react';
 import {useCart} from '../Page/CartContext'
-import assetsdetail from '../Assets/Assets_design/dvnfjvvf 1.png' 
+import assetsdetail from '../assets/Assets_design/dvnfjvvf 1.png' 
 import '../Page/AssetsDetails.css'
-import greychair from '../Assets/Assets_design/assetschair.png'
-import redchair from '../Assets/Assets_design/red_chair.png'
-import bluechair from '../Assets/Assets_design/bluechair.png'
-import goldchair from '../Assets/Assets_design/goldchair.png'
-import pinkchair from '../Assets/Assets_design/pinkchair.png'
-import redsmallchair from '../Assets/Assets_design/red.png'
-import goldsmallchair from '../Assets/Assets_design/gold.png'
-import bluesmallchair from '../Assets/Assets_design/blue.png'
-import pinksmallchair from '../Assets/Assets_design/pink.png'
-import greysmallchair from '../Assets/Assets_design/grey.png'
+import greychair from '../assets/Assets_design/assetschair.png'
+// import greychair from '../../assets/Assets_design/assetschair.png'
+import redchair from '../assets/Assets_design/red_chair.png'
+import bluechair from '../assets/Assets_design/bluechair.png'
+import goldchair from '../assets/Assets_design/goldchair.png'
+import pinkchair from '../assets/Assets_design/pinkchair.png'
+import redsmallchair from '../assets/Assets_design/red.png'
+import goldsmallchair from '../assets/Assets_design/gold.png'
+import bluesmallchair from '../assets/Assets_design/blue.png'
+import pinksmallchair from '../assets/Assets_design/pink.png'
+import greysmallchair from '../assets/Assets_design/grey.png'
 import { FiArrowLeft } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
-import chair from '../Assets/Assets_design/assetschair.png'
-import grey from '../Assets/Assets_design/Maskgroup1.png'
-import brown from '../Assets/Assets_design/Maskgroup2.png'
-import lightgrey from '../Assets/Assets_design/Maskgroup3.png'
-import drakbrown from '../Assets/Assets_design/Maskgroup4.png'
-import puple from '../Assets/Assets_design/Maskgroup5.png'
-import gold from '../Assets/Assets_design/Maskgroup6.png'
+import chair from '../assets/Assets_design/assetschair.png'
+import grey from '../assets/Assets_design/Maskgroup1.png'
+import brown from '../assets/Assets_design/Maskgroup2.png'
+import lightgrey from '../assets/Assets_design/Maskgroup3.png'
+import drakbrown from '../assets/Assets_design/Maskgroup4.png'
+import puple from '../assets/Assets_design/Maskgroup5.png'
+import gold from '../assets/Assets_design/Maskgroup6.png'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { SiInstagram } from 'react-icons/si'
 import { IoLogoYoutube } from 'react-icons/io'
-import AssetsTrace from '../Assets/Assets_design/AssetTraced.png'
-import trace from '../Assets/Assets_design/Traced.png'
+import AssetsTrace from '../assets/Assets_design/AssetTraced.png'
+import trace from '../assets/Assets_design/Traced.png'
 
 const products = [
   { id: 1,  image: redsmallchair, bigImage: redchair, price:4999,  quantity:0},
@@ -67,7 +68,20 @@ const AssetsDetails = () => {
   // };
 
   return(
-    <div className='flex assetsdetails_container'>
+    <div>
+{/* 
+<div className="grid grid-cols-1 sm:grid-cols-[minmax(300px,550px)_minmax(400px,730px)_minmax(300px,520px)] gap-4 p-4 bg-black">
+  <div>  
+           <h4 className='text-[#D5BA94] text-[24px] pl-24 font-light'>Company Name</h4>
+            <h3>Assets Name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+            </div>
+  <div className="bg-green-500 text-white p-4 text-center">Column 2</div>
+  <div className="bg-red-500 text-white p-4 text-center">Column 3</div>
+</div> */}
+
+
+       <div className='flex assetsdetails_container'>
        <div className=' px-16 assest_col1'>
             <h4>Company Name</h4>
             <h3>Assets Name</h3>
@@ -140,12 +154,12 @@ const AssetsDetails = () => {
             </div>
             <h6 style={{color:"white", fontSize:"20"}}>Share on Social Media</h6>
             <div className='assets_social'>
-            <div className="social-icons">
-               <Link to="#" className='socialicon'><FaFacebook/></Link>
+            <div className=" flex social-icons mt-4">
+               <Link to="#" className='socialicon bg-[#d9d9d954] px-1 py-1 rounded-lg'><FaFacebook/></Link>
            
-            <Link to="#"  className='socialicon'><SiInstagram/></Link>
-            <Link to="#"  className='socialicon'><FaLinkedin/></Link>
-            <Link to="#"  className='socialicon'><IoLogoYoutube/></Link>
+            <Link to="#"  className='socialicon bg-[#d9d9d954] px-1 py-1 rounded-lg'><SiInstagram/></Link>
+            <Link to="#"  className='socialicon bg-[#d9d9d954] px-1 py-1 rounded-lg'><FaLinkedin/></Link>
+            <Link to="#"  className='socialicon bg-[#d9d9d954] px-1 py-1 rounded-lg'><IoLogoYoutube/></Link>
              
             </div> 
             </div>
@@ -160,6 +174,9 @@ const AssetsDetails = () => {
             {/* <div> <button className="assets_button2">Customize</button></div> */}
            </div>
     </div>
+    </div>
+
+   
   )
 
 //   return (

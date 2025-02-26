@@ -1,0 +1,89 @@
+select option {
+  background-color: black;
+  filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-filter: blur(0.1px);
+  color: #ffffff9a;
+  font-family: Montserrat;
+  font-size:  18px;
+  font-weight: 200;
+ margin-top: 30px;
+  /* padding: 10px 60px 8px 10px;  */
+  padding: 20px;
+  border:0.1 solid #9c0f0f;
+  border-radius: 30px;
+}
+
+select {
+  border-radius: 50px;
+}
+
+.react-calendar {
+  background: rgba(56, 55, 55, 0.199) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 75px !important;
+  padding: 20px !important;
+  color: white;
+  width: 600px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  border: 0.01px solid rgba(128, 128, 128, 0.356);
+}
+
+.react-calendar__tile {
+  background: transparent !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.react-calendar__tile:hover {
+  
+  background:#D5BA94 !important;
+ 
+}
+
+.react-calendar__navigation {
+  color: white !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: white !important;
+}
+
+.react-calendar__month-view__weekdays {
+  font-family: "Montserrat", sans-serif !important; /* Change font */
+  font-weight: 400 !important; /* Remove bold */
+  font-size: 14px !important; /* Adjust size */
+  /* color: #ffffff !important;  */
+}
+/* Remove hover effect on the month title */
+.react-calendar__navigation__label {
+  text-decoration: none !important;
+  pointer-events: none !important; /* Disables hover effect */
+  background: transparent !important; /* Ensures no background change */
+  color: #333 !important; /* Set your preferred text color */
+  font-size: 16px !important; /* Adjust font size */
+  font-weight: normal !important; /* Remove bold if needed */
+}
+
+/* Remove hover effect on the navigation bar */
+.react-calendar__navigation__label:hover {
+  text-decoration: none !important;
+  background: transparent !important;
+  color: #333 !important;
+}
+
+/* Style the navigation buttons */
+.react-calendar__navigation button {
+  background: none !important; /* Remove default background */
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 18px !important; /* Adjust arrow size */
+  color: #d5ba94 !important; /* Set arrow color */
+}
+
+/* Change arrow hover effect */
+.react-calendar__navigation button:hover {
+  color: #b08a64 !important; /* Slightly darker shade */
+}

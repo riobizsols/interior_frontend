@@ -199,6 +199,18 @@
     color: aliceblue;
     font-family: Georgia;
 }
+
+.book_budget_p1{
+    position: absolute;
+    top:75%;
+    left: 65%;
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Georgia;
+}
+
+
 .book_budget_amount{
 filter: blur(10px);
 backdrop-filter: blur(20px);
@@ -206,9 +218,85 @@ backdrop-filter: blur(20px);
 position: absolute;
 top:82%;
 left:25%;
-font-size: 30px;
+font-size: 18px;
 background-color: #11111149;
 font-weight: 400;
-color: rgb(255, 255, 255);
+color: rgba(255, 255, 255, 0.5);
 font-family: Georgia;
+padding: 10px 15px 10px 15px;
+border-radius: 50px;
+border: 0.1px solid #ffffff3d;
 }
+
+.book_budget_amount:hover{
+    border: 0.0px solid #ffffff3d;
+    background-color: #11111149;
+}
+
+.book_budget_amount option{
+    border-radius: 30px;
+}
+
+.book_budget_amount option:hover{
+    background-color: #d5ba94;
+    border-radius: 30px;
+} 
+
+
+
+.book_budget_possession{
+    filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: blur(0.1px);
+    position: absolute;
+    top:82%;
+    left:65%;
+    font-size: 18px;
+    background-color: #11111149;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Georgia;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px;
+    border: 0.1px solid #ffffff3d;
+    }
+    
+    .book_budget_possession:hover{
+        border: 0.0px solid #ffffff3d;
+        background-color: #11111149;
+    }
+    
+    .book_budget_possession option{
+        border-radius: 30px;
+    }
+    
+    .book_budget_possession option:hover{
+        background-color: #d5ba94;
+        border-radius: 30px;
+    } 
+    
+
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: rgba(126, 19, 19, 0.5);
+    pointer-events: none;
+  }
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
