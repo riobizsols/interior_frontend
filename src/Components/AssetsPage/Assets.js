@@ -53,6 +53,7 @@ const Assets = () => {
 
 {/* <Banner page="assets" /> */}
 
+    
 
      <div className="assets-container">
      <div className="carousel-header">
