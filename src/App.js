@@ -26,8 +26,8 @@ function App() {
   const page = location.pathname.replace("/", "") || "home";
 
   // Define pages where the banner should NOT be shown
-  const noBannerPaths = [ "login", "signup", "design", "Booking-Design"]; // Add more pages as needed
-  const noFooterPaths = [ "login", "signup", "design", "Booking-Design"]; // Add more pages as needed
+  const noBannerPaths = [ "login", "signup", "design", "Booking-Design", "assets-details"]; // Add more pages as needed
+  const noFooterPaths = [ "login", "signup", "design", "Booking-Design", "assets-details"]; // Add more pages as needed
 
   // Check if the current path includes any restricted patterns
   const hideBanner = noBannerPaths.some((path) => location.pathname.includes(path));
