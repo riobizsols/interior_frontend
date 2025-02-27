@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "../Navbar/Navbar.css"
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
 
@@ -24,11 +25,11 @@ const Navbar = () => {
 
         <ul  className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <li><Link to='/' onClick={closeMenu}>Home</Link></li>
-            <li><Link to="#" onClick={closeMenu}>Project</Link></li>
+            <li><HashLink to="/#features-container" onClick={closeMenu}>Designs</HashLink></li>
             <li><Link to="/assets" onClick={closeMenu}>Assets</Link></li>
-            <li><Link to="#" onClick={closeMenu}>Our Clients</Link></li>
+            <li><HashLink to="/#template-container" onClick={closeMenu}>Our Clients</HashLink></li>
             <li><Link to="#" onClick={closeMenu}>Contact</Link></li>
-            <li><Link to="#" onClick={closeMenu}>Blog</Link></li>
+            <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
         </ul>
         <div className={`btn ${isMenuOpen ? 'active' : ''}`}>
         <Link to=''>
