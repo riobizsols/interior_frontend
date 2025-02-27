@@ -58,7 +58,7 @@
   width: 100%;
 }
 
-.arrow {
+.arrow_home {
   display: inline-block;
   margin-left: 8px;
   width: 10px;
@@ -69,11 +69,11 @@
   transition: transform 0.3s ease;
 }
 
-.arrow.down {
+.arrow_home.down {
   transform: rotate(45deg); /* Down Arrow */
 }
 
-.arrow.right {
+.arrow_home.right {
   transform: rotate(90deg); /* Right Arrow */
 }
 
@@ -584,7 +584,7 @@
 }
 }
 
-.features-container {
+#features-container {
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -696,7 +696,7 @@
 
 /* For tablets and smaller screens (max-width: 1024px) */
 @media (max-width: 1024px) {
-.features-container {
+#features-container {
   grid-template-columns: 1fr; /* Stack content vertically */
   text-align: center; /* Center-align text */
   padding: 40px 20px; /* Adjust padding */
@@ -717,7 +717,7 @@
 
 /* For large mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
-.features-container {
+#features-container {
   padding: 30px 15px; /* Adjust padding for smaller screens */
 }
 
@@ -740,7 +740,7 @@
 
 /* For small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
-.features-container {
+#features-container {
   padding: 20px 10px;
 }
 
@@ -905,6 +905,8 @@
 
 .view_btn{
   padding:20px 0 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .view-all-btn{
@@ -916,7 +918,6 @@
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  display: flex;
   margin: 3px auto;
 }
 
@@ -1264,7 +1265,7 @@ color: #fff;
   border-radius: 25px;
   cursor: pointer;
   display: flex;
-  margin: 50px auto 30px;
+  margin: 0 auto;
   transition: background-color 0.3s ease;
 }
 
@@ -1385,7 +1386,7 @@ color: #fff;
 
 
 /* Container */
-.template-container {
+#template-container {
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 2rem;
@@ -1528,7 +1529,7 @@ width: 42%;
 
 /* For tablets and smaller screens (max-width: 1024px) */
 @media (max-width: 1024px) {
-.template-container {
+#template-container {
   grid-template-columns: 1fr; /* Stack sections vertically */
   padding: 2rem; /* Reduce padding */
   gap: 1.5rem;
@@ -1592,7 +1593,7 @@ width: 42%;
 
 /* For large mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
-.template-container {
+#template-container {
   padding: 1.5rem; /* Reduce padding further */
 }
 
@@ -1645,7 +1646,7 @@ width: 42%;
 
 /* For small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
-.template-container {
+#template-container {
   padding: 1rem;
   gap: 1rem;
 }
@@ -2214,4 +2215,8 @@ bottom: 0;
 right: 0;
 z-index: 0;
 opacity: 0.5;
+}
+.message{
+  padding: 20px;
+  color: #ffffff;
 }

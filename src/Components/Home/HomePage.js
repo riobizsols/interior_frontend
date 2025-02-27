@@ -61,6 +61,8 @@ import image15 from "../../assets/pngegg1.png"
 import image16 from "../../assets/pngwing.com1.png"
 import image17 from "../../assets/scsac1.png"
 import image18 from "../../assets/vdsdvd1.png"
+import { IoArrowDownOutline } from "react-icons/io5";
+import { FiArrowRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom'
@@ -162,35 +164,35 @@ const HomePage = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
       image:interior_livingroom,
-      page: "#",
+      page: "/livingroom",
     },
     {
       title: "Kitchen",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
       image:interior_kitchen,
-      page: "#",
+      page: "/kitchen",
     },
     {
       title: "Bed Room",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
       image:interior_bedroom,
-      page: "#",
+      page: "/bedroom",
     },
     {
       title: "Bath Room",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
       image:interior_bathroom,
-      page: "#",
+      page: "/bathroom",
     },
     {
       title: "Home Office",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
       image:interior_homeoffice,
-      page: "#",
+      page: "/homeoffice",
     },
     {
       title: "Assets",
@@ -199,6 +201,7 @@ const HomePage = () => {
       image:interior_assets,
       page: "/assets",
     },
+    
   ];
 
   const steps = [
@@ -222,7 +225,9 @@ const HomePage = () => {
       heading: "Implement",
       content: "We bring designs to life with expert precision, ensuring the final outcome meets your expectations perfectly.",
       image:our_process_3,
+      
     },
+   
   ];
 
   const feedbacks = [
@@ -277,6 +282,9 @@ const HomePage = () => {
   const handleButtonClickPage = (page) => {
     navigate(page);
   };
+  const handleButtonClickPageProcess = () => {
+    navigate("/design/Booking-Design");
+  };
 
 
 
@@ -311,7 +319,7 @@ const HomePage = () => {
             <p>Innovative Designs Created</p>
           </div>
         </div>
-        <Link to="/assets">
+        <Link to="/">
         <button className="contact-button">Contact us</button>
         </Link>
       </div>
@@ -348,8 +356,8 @@ const HomePage = () => {
               <h4 onClick={() => toggleStep(step.id)} style={{ cursor: "pointer" }}>
               {step.title}
                 <span
-                  className={`arrow ${
-                    activeStep === step.id ? "down" : "right"
+                  className={`arrow_home ${
+                    activeStep === step.id ? 'down' : 'right'
                   }`}
                 ></span>
               </h4>
@@ -362,7 +370,7 @@ const HomePage = () => {
         <img src={image_19} alt="image_19" />
       </div>
         <button 
-        onClick={() => handleButtonClickPage(featuresData.page)}
+        onClick={() => handleButtonClickPageProcess(steps.page)}
         className="contact-button">Book a Free Consultation</button>
       </div>
     </div>
@@ -386,7 +394,7 @@ const HomePage = () => {
     </div>
 
     
-<div className="features-container">
+<div id="features-container">
       <div className="features-text">
         <h2>Interior Designs</h2>
         <h1>Transform Your Space with Inspired Interior Designs</h1>
@@ -472,63 +480,14 @@ const HomePage = () => {
         &#8594;
       </button>
     </div>
-      {/* <div className="carousel-wrapper">
-        <button className="carousel-btn left-btn" onClick={scrollLeft3}>
-          &#8249;
-        </button>
-        <div className="carousel-track" ref={carouselRef3}>
-          {images2.map((img, index) => (
-            <div className="carousel-item2" key={index}>
-              <img src={img} alt={`Item ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-        <button className="carousel-btn right-btn" onClick={scrollRight3}>
-          &#8250;
-        </button>
-      </div> */}
-      <button className="view-assets-btn">View All Assets</button>
+    <Link to="/assets">
+    <button className="view-assets-btn">View All Assets</button>
+        </Link>
+      
       <hr className='assets_split' />
     </div>
 
-    {/* <div className="projects-container">
-      <div className="main_text">
-      <h2>Project</h2>
-      <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
-      </div>
-      <div className="carousel-container">
-      <div className="carousel">
-        {images.map((img, index) => (
-          <div key={index} className="carousel-item">
-            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image" />
-            <div className="image-text">
-              <h3>{img.title}</h3>
-              <p>{img.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-      <div className="carousel-container">
-      <div className="carousel_1" >
-        {images.map((img, index) => (
-          <div key={index} className="carousel-item_1">
-            <img src={img.src} alt={`Image ${index + 1}`} className="carousel-image_1" />
-            <div className="image-text">
-              <h3>{img.title}</h3>
-              <p>{img.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-    <div className="view_btn">
-      <button className="view-all-btn">View All Projects</button>
-      </div>
-    </div> */}
-
-<div className="template-container">
+     <div id="template-container">
       <div className="content-section">
         {/* Feedback Content */}
         <h3 className="project-title">Our Clients Feedback</h3>
@@ -580,12 +539,8 @@ const HomePage = () => {
       <h2>Blogs</h2>
       <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
       </div>
+
       <div className="carousel-container">
-      {/* Left Arrow */}
-      {/* <button className="scroll-button left" onClick={scrollLeft}>
-      <IoIosArrowBack />
-      </button> */}
-      
       <div className="carousel">
         {images3.map((img, index) => (
           <div key={index} className="carousel-item">
@@ -600,18 +555,14 @@ const HomePage = () => {
           </div>
         ))}
       </div>
-
-      {/* Right Arrow */}
-      {/* <button className="scroll-button right" onClick={scrollRight}>
-      <IoIosArrowForward />
-      </button> */}
     </div>
 
     <div className="view_btn">
-      <button className="view-all-btn">View All Blogs</button>
+    <Link to="/blog">
+    <button className="view-all-btn">View All Blogs</button>
+    </Link>
       </div>
     </div>
-
     </div>
   )
 }

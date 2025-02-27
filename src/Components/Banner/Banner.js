@@ -9,6 +9,7 @@ import kitchen_banner from '../../assets/Banners_Images/Banner_Kitchen.png'
 import homeoffice_banner from '../../assets/Banners_Images/Banner_Home_Office.png'
 import blog1_banner from '../../assets/Banners_Images/Banner_Blog1.png'
 import blog_banner from '../../assets/Banners_Images/Banner_Blog.png'
+import contact_banner from '../../assets/Banners_Images/Banner_contactform.png'
 import Navbar from '../Navbar/Navbar'
 import '../Banner/Banner.css'
 import { Link, useLocation } from "react-router-dom";
@@ -26,7 +27,7 @@ const Banner = ({ page }) => {
     { page: "kitchen", title: "Kitchen", description: "Contact us for more info.", image: kitchen_banner,  button: "Talk to Our Design Consultant" },
     { page: "homeoffice", title: "Home Office", description: "Contact us for more info.", image: homeoffice_banner,  button: "Talk to Our Design Consultant" },
     { page: "blog1", title: "Home Office", description: "Contact us for more info.", image: blog1_banner,  button: "Talk to Our Design Consultant" },
-    { page: "blog", title: "Home Office", description: "Contact us for more info.", image: blog_banner,  button: "Talk to Our Design Consultant" },
+    { page: "blog", title: "Blogs", description: "Contact us for more info.", image: blog_banner,  button: "Talk to Our Design Consultant" },
     { page: "livingroomname", title: "Living Room Name", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
     { page: "assetsdetails", title: "Assets Details", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
     { page: "assets-details", title: "Assets Details", description: "We source high-quality, durable materials to bring elegance and longevity to your interiors. Modern technology seamlessly blended with aesthetics for enhanced comfort and functionality.", image: assets_details,  button: "Talk to Our Design Consultant" },
@@ -84,7 +85,7 @@ const Banner = ({ page }) => {
       )}
         <h1 className="bh">{currentBanner.title}</h1>
          <p>{currentBanner.description}</p>
-         <Link to="">
+         <Link to="/design/Booking-Design">
          <button className="book">{currentBanner?.button}</button>
          </Link>
        </div>

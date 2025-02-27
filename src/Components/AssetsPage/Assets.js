@@ -91,8 +91,6 @@ const Assets = () => {
         <button>{">"}</button>
       </div>
     </div>
-
-    <Footer/>
     </div>
   )
 }

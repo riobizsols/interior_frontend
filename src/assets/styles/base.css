@@ -35,3 +35,6 @@ p{
     font-weight: lighter;
     line-height: 1.6;
 }
+a{
+    display: inline-block;
+}
