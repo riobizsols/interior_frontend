@@ -17,7 +17,7 @@ import Blog1 from './Components/Blogs/Blog1';
 import Blogpage from './Components/Blogs/Blogpage';
 import Basic_Info from "./Components/LivingRoom_Design/Basic_Infor";
 import Booking_time_date from "./Components/LivingRoom_Design/Booking_time_date";
-import AssetsDetails from "./Page/AssetsDetails"
+import AssetsDetails from "./Components/AssetsDetails/AssetsDetails";
 import MainContact from "./Components/Contactform/MainContact";
 
 

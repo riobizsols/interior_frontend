@@ -1,33 +1,34 @@
 import React, { useState, useEffect} from 'react';
-import {useCart} from '../Page/CartContext'
-import assetsdetail from '../assets/Assets_design/dvnfjvvf 1.png' 
-import '../Page/AssetsDetails.css'
-import greychair from '../assets/Assets_design/assetschair.png'
+// import {useCart} from '.../Page/CartContext'
+// import assetsdetail from '../../assets/Assets_design/dvnfjvvf 1.png' 
+import '../AssetsDetails/AssetsDetails.css'
+
+import greychair from '../../assets/Assets_design/assetschair.png'
 // import greychair from '../../assets/Assets_design/assetschair.png'
-import redchair from '../assets/Assets_design/red_chair.png'
-import bluechair from '../assets/Assets_design/bluechair.png'
-import goldchair from '../assets/Assets_design/goldchair.png'
-import pinkchair from '../assets/Assets_design/pinkchair.png'
-import redsmallchair from '../assets/Assets_design/red.png'
-import goldsmallchair from '../assets/Assets_design/gold.png'
-import bluesmallchair from '../assets/Assets_design/blue.png'
-import pinksmallchair from '../assets/Assets_design/pink.png'
-import greysmallchair from '../assets/Assets_design/grey.png'
+import redchair from '../../assets/Assets_design/red_chair.png'
+import bluechair from '../../assets/Assets_design/bluechair.png'
+import goldchair from '../../assets/Assets_design/goldchair.png'
+import pinkchair from '../../assets/Assets_design/pinkchair.png'
+import redsmallchair from '../../assets/Assets_design/red.png'
+import goldsmallchair from '../../assets/Assets_design/gold.png'
+import bluesmallchair from '../../assets/Assets_design/blue.png'
+import pinksmallchair from '../../assets/Assets_design/pink.png'
+import greysmallchair from '../../assets/Assets_design/grey.png'
 import { FiArrowLeft } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
-import chair from '../assets/Assets_design/assetschair.png'
-import grey from '../assets/Assets_design/Maskgroup1.png'
-import brown from '../assets/Assets_design/Maskgroup2.png'
-import lightgrey from '../assets/Assets_design/Maskgroup3.png'
-import drakbrown from '../assets/Assets_design/Maskgroup4.png'
-import puple from '../assets/Assets_design/Maskgroup5.png'
-import gold from '../assets/Assets_design/Maskgroup6.png'
+import chair from '../../assets/Assets_design/assetschair.png'
+import grey from '../../assets/Assets_design/Maskgroup1.png'
+import brown from '../../assets/Assets_design/Maskgroup2.png'
+import lightgrey from '../../assets/Assets_design/Maskgroup3.png'
+import drakbrown from '../../assets/Assets_design/Maskgroup4.png'
+import puple from '../../assets/Assets_design/Maskgroup5.png'
+import gold from '../../assets/Assets_design/Maskgroup6.png'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { SiInstagram } from 'react-icons/si'
 import { IoLogoYoutube } from 'react-icons/io'
-import AssetsTrace from '../assets/Assets_design/AssetTraced.png'
-import trace from '../assets/Assets_design/Traced.png'
+import AssetsTrace from '../../assets/Assets_design/AssetTraced.png'
+import trace from '../../assets/Assets_design/Traced.png'
 
 const products = [
   { id: 1,  image: redsmallchair, bigImage: redchair, price:4999,  quantity:0},
@@ -81,14 +82,14 @@ const AssetsDetails = () => {
 </div> */}
 
 
-       <div className='flex assetsdetails_container'>
+       <div className='flex assetsdetails_container '>
        <div className=' px-16 assest_col1'>
-            <h4>Company Name</h4>
-            <h3>Assets Name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
-            {/* <img src={AssetsTrace} alt=""/> */}
+            <h4>CozyHaven</h4>
+            <h3 className='text-lg'>Velvet Bliss</h3>
+            <p>Experience luxury with the Velvet Bliss Armchair, wrapped in premium velvet fabric with deep cushioning for unmatched comfort. Its chic design elevates any living space while providing a snug seating experience.</p>
+            <img src={AssetsTrace} alt=""/>
            </div>
-           <div className='assest_col2' >
+           <div className='assest_col2 mb-14' >
            <div className="carousel-container">   
       <div className="big-image-container">
         
@@ -118,8 +119,11 @@ const AssetsDetails = () => {
           </div>
         ))}
       </div>
+      {/* <button className='bg-black rounded-full w-10 h-10  absolute left-10 top-[] '>
+         <FiArrowRight/>
+        </button> */}
       {/* <button className="control-next">
-      <FiArrowRight onClick={handleNext} className='arrow'/>
+      <span className='arrow'><FiArrowRight/></span>
         </button> */}
       </div>
     </div>
