@@ -16,7 +16,7 @@ import Blog1 from './Components/Blogs/Blog1';
 import Blogpage from './Components/Blogs/Blogpage';
 import Basic_Info from "./Components/LivingRoom_Design/Basic_Infor";
 import Booking_time_date from "./Components/LivingRoom_Design/Booking_time_date";
-import AssetsDetails from "./Page/AssetsDetails"
+import AssetsDetails from "./Components/AssetsDetails/AssetsDetails";
 
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
         <Route path='/blog' element={<Blogpage/>}></Route>
         <Route path='/design/Booking-Design' element={<Basic_Info/>}/>
         <Route path="/BookingDesign" element={<Basic_Info formData={formData} setFormData={setFormData}/>}/> 
-       <Route path="/assets-details" element={<AssetsDetails/>}/>
+        <Route path = "/assets-details" element={<AssetsDetails/>}/>
 
 
       </Routes>

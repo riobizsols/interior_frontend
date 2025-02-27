@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import main_banner from '../../assets/Banners_Images/Banner_Home.png'
 import assets_banner from '../../assets/Banners_Images/Banner_Assets.png'
+import assets_details from '../../assets/Banners_Images/Banner_AssetsDesign.png'
 import living_banner from '../../assets/Banners_Images/Banner_Livingroom.png'
 import bedroom_banner from '../../assets/Banners_Images/Banner_Bedroom.png'
 import bathroom_banner from '../../assets/Banners_Images/Banner_Bathroom.png'
@@ -28,7 +29,7 @@ const Banner = ({ page }) => {
     { page: "blog", title: "Home Office", description: "Contact us for more info.", image: blog_banner,  button: "Talk to Our Design Consultant" },
     { page: "livingroomname", title: "Living Room Name", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
     { page: "assetsdetails", title: "Assets Details", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
-    // { page: "design", title: RelatedPage, description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
+    { page: "assets-details", title: "Assets Details", description: "We source high-quality, durable materials to bring elegance and longevity to your interiors. Modern technology seamlessly blended with aesthetics for enhanced comfort and functionality.", image: assets_details,  button: "Talk to Our Design Consultant" },
   ];
    
   const homeBannerImages = [
