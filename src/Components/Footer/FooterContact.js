@@ -1,85 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import dsfffe3 from '../../assets/dsfffe3.png'
 import { FaFacebook } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { HashLink } from 'react-router-hash-link';
 
-const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const handleSubscribe = async () => {
-    if (!validateEmail(email)) {
-      setMessage("Please enter a valid email address.");
-      return;
-    }
-
-    try {
-      const response = await fetch("http://localhost:5001/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to subscribe. Please try again later.");
-      }
-
-      const data = await response.json();
-      setMessage("Thank you for subscribing!");
-      alert("Thank you for subscribing")
-      console.log("Response from server:", data);
-    } catch (error) {
-      console.error("Error:", error);
-      setMessage("There was an error with your subscription.");
-      alert("There was an error with your subscription.")
-    }
-  };
+const FooterContact = () => {
+ 
   return (
     <div>
-  <section className="support-section">
-      <div className="support-content">
-        <p className="support-title">Our Support</p>
-        <h1 className="main-title">Ready to transform your space?</h1>
-        <p className="description">
-          Submit your email to begin your customized design journey today.
-        </p>
-        <form
-          className="subscribe-form"
-          onSubmit={(e) => e.preventDefault()} // Prevents form reload
-        >
-          <input
-            type="text"
-            className="input-field"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button
-            type="button"
-            className="subscribe-button"
-            onClick={handleSubscribe}
-          >
-            Subscribe
-          </button>
-        </form>
-        {message && <p className="message">{message}</p>}
-      </div>
-      <div className="water_mark_4">
-        <img src={dsfffe3} alt="watermark" />
-      </div>
-    </section>
-
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section footer-about">
@@ -140,4 +70,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterContact

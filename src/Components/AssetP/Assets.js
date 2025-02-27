@@ -1,18 +1,18 @@
 import React, { useState } from 'react'; 
 import { AiFillCaretDown } from "react-icons/ai";
-import searchicon from '../../Assets/search.png'
+import searchicon from '../../assets/search.png'
 import '../AssetP/Assets.css'
-import Header1 from '../../Assets/Assets image1.png'
+// import Header1 from '../../assets/'
 import Navbar from '../Navbar/Navbar'
-import Mask1 from '../../Assets/—Pngtree—dining table_5631946 1.png';
-import Mask2 from '../../Assets/pngwing.com (1) 1.png';
-import Mask3 from '../../Assets/Golden-Fancy-Light-PNG-Clipart-Background 1.png';
-import Mask4 from '../../Assets/11444629 copy 1.png';
-import Mask5 from '../../Assets/download 1.png';
-import Mask6 from '../../Assets/pngegg 1.png';
-import Mask7 from '../../Assets/vdsdvd 1.png';
-import Mask8 from '../../Assets/scsac 1.png';
-import Mask9 from '../../Assets/closed-door-png-transparent-images--25 1.png';
+import Mask1 from '../../assets/—Pngtree—dining table_5631946 1.png';
+import Mask2 from '../../assets/pngwing.com (1) 1.png';
+import Mask3 from '../../assets/Golden-Fancy-Light-PNG-Clipart-Background 1.png';
+import Mask4 from '../../assets/11444629 copy 1.png';
+import Mask5 from '../../assets/download 1.png';
+import Mask6 from '../../assets/pngegg 1.png';
+import Mask7 from '../../assets/vdsdvd 1.png';
+import Mask8 from '../../assets/scsac 1.png';
+import Mask9 from '../../assets/closed-door-png-transparent-images--25 1.png';
 import Footer from '../Footer/Footer';
 
 const designs = [
@@ -50,7 +50,7 @@ const designs = [
   
     return (
       <div>
-        <div id='banner1'>
+        {/* <div id='banner1'>
           <img className='Livheader' src={Header1} alt='Home Office Background' />
           <Navbar />
   
@@ -64,7 +64,7 @@ const designs = [
             </p>
             <button className="design_button">Talk to Our Design Consultant</button>
           </div>
-        </div>
+        </div> */}
   
         {/* Interior Designs Section */}
         <section className="interior_designs">
@@ -129,7 +129,7 @@ const designs = [
       </div>
         </section>
         
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   };

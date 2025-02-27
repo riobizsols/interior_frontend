@@ -349,7 +349,7 @@ const HomePage = () => {
       </div>
       <div className="process-content">
         <h3>Our Process</h3>
-        <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+        <h1>Transforming your vision into reality with a seamless and thoughtful approach.</h1>
         <div className="steps">
           {steps.map((step) => (
             <div key={step.id} className="step">
@@ -437,13 +437,11 @@ const HomePage = () => {
       <div className="carousel-header">
         <div className="carousel_head1">
         <h2>Assets</h2>
-        <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+        <h1>Premium Assets for Your Interiors</h1>
         </div>
         <div className="carousel_para">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor
-          nulla commodo dui, nec ultricies arcu nisi tristique eros.
+        Upgrade your home or office with our carefully curated selection of interior assets. From modern sofas to classic wooden doors, we provide durable and stylish pieces to complement any design aesthetic.
         </p>
         </div>
       </div>

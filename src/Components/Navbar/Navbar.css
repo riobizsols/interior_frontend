@@ -14,7 +14,7 @@
     left: 50%;
     width: 80%;
     transform: translate(-50%, -50%);
-    background-color: #f5f1f12e;
+    background-color: #22222252;
     backdrop-filter: blur(20px);
     -webkit-filter: blur(0.1px);
     border-radius: 50px;

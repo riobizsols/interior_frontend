@@ -28,7 +28,7 @@ const Navbar = () => {
             <li><HashLink to="/#features-container" onClick={closeMenu}>Designs</HashLink></li>
             <li><Link to="/assets" onClick={closeMenu}>Assets</Link></li>
             <li><HashLink to="/#template-container" onClick={closeMenu}>Our Clients</HashLink></li>
-            <li><Link to="#" onClick={closeMenu}>Contact</Link></li>
+            <li><Link to="/contactform" onClick={closeMenu}>Contact</Link></li>
             <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
         </ul>
         <div className={`btn ${isMenuOpen ? 'active' : ''}`}>

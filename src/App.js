@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import React, { useState } from "react";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import '../src/assets/styles/base.css'
 import HomePage from './Components/Home/HomePage';
 import Assets from './Components/AssetsPage/Assets';
@@ -26,8 +27,8 @@ function App() {
   const page = location.pathname.replace("/", "") || "home";
 
   // Define pages where the banner should NOT be shown
-  const noBannerPaths = [ "login", "signup", "design", "Booking-Design"]; // Add more pages as needed
-  const noFooterPaths = [ "login", "signup", "design", "Booking-Design"]; // Add more pages as needed
+  const noBannerPaths = [ "login", "signup", "design", "Booking-Design", "assets-details"]; // Add more pages as needed
+  const noFooterPaths = [ "login", "signup", "design", "Booking-Design", "assets-details", "contactform"]; // Add more pages as needed
 
   // Check if the current path includes any restricted patterns
   const hideBanner = noBannerPaths.some((path) => location.pathname.includes(path));
@@ -38,6 +39,7 @@ function App() {
     <div className="App">
       {/* Render Banner only if the current path doesn't match restricted patterns */}
       {!hideBanner && <Banner page={page} />}
+      <ScrollToTop/> 
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/assets' element={<Assets/>}/>
@@ -54,7 +56,6 @@ function App() {
         <Route path="/BookingDesign" element={<Basic_Info formData={formData} setFormData={setFormData}/>}/> 
        <Route path="/assets-details" element={<AssetsDetails/>}/>
        <Route path="/contactform" element={<MainContact/>}/>
-
 
       </Routes>
       {!hideFooter && <Footer page={page}/>}

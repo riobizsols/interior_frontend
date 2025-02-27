@@ -23,14 +23,14 @@ const Assets = () => {
 
   const assets = [
     { id: 1, name: "Dining Table", category: "Furniture", src: image9 },
-    { id: 2, name: "Ceiling Fan", category: "Electronics", src: image10 },
-    { id: 3, name: "Ceiling Light", category: "Electronics", src: image12 },
-    { id: 4, name: "Sofa", category: "Furniture", src: image13 },
-    { id: 5, name: "Sofa Chair", category: "Furniture", src: image14 },
+    { id: 2, name: "Ceiling Fan", category: "Electronics", src: image14 },
+    { id: 3, name: "Ceiling Light", category: "Electronics", src: image16 },
+    { id: 4, name: "Sofa", category: "Furniture", src: image18 },
+    { id: 5, name: "Sofa Chair", category: "Furniture", src: image10 },
     { id: 6, name: "L Shape Sofa", category: "Furniture", src: image15 },
-    { id: 7, name: "Recliner", category: "Furniture", src: image16 },
+    { id: 7, name: "Recliner", category: "Furniture", src: image12 },
     { id: 8, name: "Wooden Table", category: "Furniture", src: image17 },
-    { id: 9, name: "Wooden Door", category: "Furniture", src: image18 },
+    { id: 9, name: "Wooden Door", category: "Furniture", src: image13 },
   ];
 
   const filteredAssets = assets.filter(
@@ -75,13 +75,19 @@ const Assets = () => {
       </div>
       <div className="assets-grid">
         {filteredAssets.map((asset) => (
-          <div key={asset.id} className="asset-card">
+          <div  className="asset-card">
+            <Link
+            key={asset.id}
+            to=""
+            state={{src: asset.src, name: asset.name, category: asset.category}}
+            >
             <img src={asset.src} alt={asset.name} />
             <h3>{asset.name}</h3>
+            </Link>
           </div>
         ))}
       </div>
-      <div className="pagination">
+      {/* <div className="pagination">
         <button>{"<"}</button>
         <button className="active">1</button>
         <button>2</button>
@@ -89,7 +95,7 @@ const Assets = () => {
         <button>{"..."}</button>
         <button>15</button>
         <button>{">"}</button>
-      </div>
+      </div> */}
     </div>
     </div>
   )
