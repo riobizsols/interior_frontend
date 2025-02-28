@@ -43,6 +43,8 @@ const designs = [
 
 ];
 
+const discription = "Upgrade your bathroom with sleek fixtures, spa-like elements, and smart storage solutions. From elegant vanities to rainfall showers, a well-designed bathroom can offer both luxury and functionality, turning daily routines into rejuvenating experiences."
+
   // const handleImageClick = (id) => {
   //   navigate(`/design/${id}`);
   // };
@@ -74,9 +76,7 @@ const designs = [
       <section className="interior_designs">
         <div className='interior_head_desc'>
         <h3>BathRoom Interior <br/>Designs</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui,
-             nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+        <p>{discription}</p>
           
         </div>
         <div className='filter_sec'>
@@ -127,7 +127,7 @@ const designs = [
               <Link
                 key={design.id}
                 to="/design"
-                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, }}
+                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, discription:discription }}
               >
                 <div className="livingroom_design_item">
                   <h4 className="overlay_text">{design.category}</h4>

@@ -82,9 +82,11 @@
     font-size: 20px;
     color: #d9a678;
     margin: 10px;
+    text-align: center;
   }
   
   .error {
+    display: flex;
     color: red;
     font-size: 12px;
     margin-top: -10px;

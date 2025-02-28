@@ -44,15 +44,18 @@ const MainContact = () => {
         <h1 className="main_title">Talk to Our Designer</h1>
     <div className="contact-form-container">
       
-      <form onSubmit={formik.handleSubmit} className="main-contact-form">
+      <form onSubmit={formik.handleSubmit} >
+        <div className="main-contact-form">
         <input
           type="text"
           name="name"
           placeholder="Enter your name"
           value={formik.values.name}
           onChange={formik.handleChange}
+          aria-label="Enter your full name"
+          required
         />
-        {formik.errors.name && <div className="error">{formik.errors.name}</div>}
+        {/* {formik.errors.name && <div className="error">{formik.errors.name}</div>} */}
 
         <input
           type="email"
@@ -60,8 +63,10 @@ const MainContact = () => {
           placeholder="Enter your email"
           value={formik.values.email}
           onChange={formik.handleChange}
+          aria-label="Enter your email address"
+          required
         />
-        {formik.errors.email && <div className="error">{formik.errors.email}</div>}
+        {/* {formik.errors.email && <div className="error">{formik.errors.email}</div>} */}
 
         <input
           type="text"
@@ -69,8 +74,10 @@ const MainContact = () => {
           placeholder="Enter your phone number"
           value={formik.values.phone}
           onChange={formik.handleChange}
+          aria-label="Enter your phone number"
+          required
         />
-        {formik.errors.phone && <div className="error">{formik.errors.phone}</div>}
+        {/* {formik.errors.phone && <div className="error">{formik.errors.phone}</div>} */}
 
         <input
           type="text"
@@ -78,9 +85,10 @@ const MainContact = () => {
           placeholder="Enter your address"
           value={formik.values.address}
           onChange={formik.handleChange}
+          aria-label="Enter your address"
+          required
         />
-        {formik.errors.address && <div className="error">{formik.errors.address}</div>}
-        </form>
+        {/* {formik.errors.address && <div className="error">{formik.errors.address}</div>} */}
         <label className="whatsapp-label">
           <input
             type="checkbox"
@@ -90,9 +98,12 @@ const MainContact = () => {
           />
           You can reach me on WhatsApp
         </label>
+        </div>
         
         <button type="submit" className="submit-button">Talk to Our Design Consultant</button>
         <p className="confirmation_message">{message}</p>
+        </form>
+
     </div>
     <div className="water_mark_contact">
               <img src={image_19} alt="image_19" />

@@ -16,7 +16,7 @@ import certificate from '../../assets/certificateicon.png'
 const DesignSession = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { image, category, RelatedPage, smallImages } = location.state || {};
+  const { image, category, RelatedPage, smallImages, discription } = location.state || {};
 
 
   // useEffect(() => {
@@ -30,9 +30,7 @@ const DesignSession = () => {
          <section className="interior_designs_session">
          <div className='interior_head_desc'>
       <h3>{category} {RelatedPage} Design</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui,
-             nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+        <p> {discription}</p>
         
         
         </div>

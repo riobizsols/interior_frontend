@@ -135,28 +135,19 @@ const HomePage = () => {
   };
 
 
-  // Images Array
-  const images = [
-    { src: image1, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image2, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image3, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image4, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image5, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image6, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image7, title: "Company Name", description: "Lorem ipsum is dolor" },
-    { src: image8, title: "Company Name", description: "Lorem ipsum is dolor" },
-  ];
+
 
   const images3 = [
-    { src: image1, date:"16th Nov 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image2, date:"24th sept 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image3, date:"22th Apr 2024 ", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image4, date:"19th Mar 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image5, date:"11th Jun 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image6, date:"10th Dec 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image7, date:"27th July 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image8, date:"18th Feb 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-  ];
+    { src: image1, date:"16th Nov 2024", title: "The Art of Timeless Decor", description: "Discover the elegance of classic interiors with exquisite details. From vintage aesthetics to luxurious craftsmanship, elevate your space with stunning, timeless pieces that define sophistication." },
+    { src: image2, date:"24th Sept 2024", title: "Modern Spaces, Stylish Living", description: "Transform your home with sleek, contemporary designs that blend form and function. Explore innovative decor ideas that bring harmony, warmth, and a touch of personality to every corner." },
+    { src: image3, date:"22nd Apr 2024", title: "Enhance Your Interior Style", description: "Find inspiration in beautifully curated spaces that reflect your taste. Whether minimalist or extravagant, embrace decor that speaks volumes and makes a statement effortlessly." },
+    { src: image4, date:"19th Mar 2024", title: "Luxury Meets Comfort", description: "Experience the perfect balance of luxury and comfort with furniture that redefines elegance. Sophisticated craftsmanship and high-end finishes bring a refined touch to modern living." },
+    { src: image5, date:"11th Jun 2024", title: "Create a Cozy Atmosphere", description: "Discover how lighting, textures, and carefully chosen pieces can create a warm and inviting home. Cozy spaces bring relaxation and charm to everyday living, making them truly special." },
+    { src: image6, date:"10th Dec 2024", title: "Statement Pieces for Impact", description: "Make your decor stand out with bold statement pieces. From stunning chandeliers to striking furniture, these elements transform a simple room into an extraordinary living space." },
+    { src: image7, date:"27th July 2024", title: "Inspiration for Elegant Homes", description: "Every space tells a story—let yours be one of style and sophistication. Explore design ideas that blend creativity and function for interiors that captivate and inspire." },
+    { src: image8, date:"18th Feb 2024", title: "Design Trends to Watch", description: "Stay ahead with the latest interior design trends. From innovative color palettes to sustainable materials, explore new ideas that elevate home aesthetics and bring a fresh look." },
+];
+
 
   const featuresData = [
     {
@@ -535,7 +526,7 @@ const HomePage = () => {
     <div className="projects-container-2">
       <div className="main_text">
       <h2>Blogs</h2>
-      <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+      <h1>A Journey Through Innovation and Elegance</h1>
       </div>
 
       <div className="carousel-container">

@@ -16,7 +16,7 @@ const FooterContact = () => {
           <h2 className='footer_logo'>IWD</h2>
           <p className='footer_logo2'>Interior Web Design</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui.
+          Transforming spaces with creativity and innovation. We specialize in crafting visually stunning and functional web designs tailored for the interior design industry.      
           </p>
           <div className="footer-social">
             <p>Follow us on</p>
@@ -53,7 +53,7 @@ const FooterContact = () => {
           <h4>Contact</h4>
           <p className='footer_p'>
             <span>Address</span><br />
-            15/7, Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit -15
+            15/7, XYZ Street, Main Road,<br /> Bengaluru, Karnataka - 560001
           </p>
           <p> <span>Call</span> <br /> +91 12345 67890</p>
           <p className='email'><span>Mail ID</span> <br /> <Link to="mailto:info@riobizsols.com">info@riobizsols.com</Link></p>

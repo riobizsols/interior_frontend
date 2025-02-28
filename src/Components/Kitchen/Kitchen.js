@@ -82,8 +82,9 @@ const designs = [
   { id: 34, image: B_Mask34, category: 'Modern', RelatedPage:'Kitchen', smallImages: [B_Mask4, B_Mask7, B_Mask10,] },
   { id: 35, image: B_Mask35, category: 'Classic', RelatedPage:'Kitchen', smallImages: [B_Mask4, B_Mask7, B_Mask10,] },
   { id: 36, image: B_Mask36, category: 'Trendy', RelatedPage:'Kitchen', smallImages: [B_Mask4, B_Mask7, B_Mask10,] },
-
 ];
+
+const discription = "Design a functional and stylish kitchen with modern appliances, ample storage, and a welcoming layout. Whether it’s a cozy space or an open-concept culinary haven, the right elements can transform your kitchen into the heart of your home."
 
   // const handleImageClick = (id) => {
   //   navigate(`/design/${id}`);
@@ -116,9 +117,7 @@ const designs = [
       <section className="interior_designs">
         <div className='interior_head_desc'>
         <h3>Kitchen Interior <br/>Designs</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui,
-             nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+        <p> {discription}</p>
           
         </div>
         <div className='filter_sec'>
@@ -169,7 +168,7 @@ const designs = [
               <Link
                 key={design.id}
                 to="/design"
-                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, }}
+                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, discription:discription }}
               >
                 <div className="livingroom_design_item">
                   <h4 className="overlay_text">{design.category}</h4>
