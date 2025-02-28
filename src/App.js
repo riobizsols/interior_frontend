@@ -56,7 +56,6 @@ function App() {
         <Route path="/BookingDesign" element={<Basic_Info formData={formData} setFormData={setFormData}/>}/> 
        <Route path="/assets-details" element={<AssetsDetails/>}/>
        <Route path="/contactform" element={<MainContact/>}/>
-
       </Routes>
       {!hideFooter && <Footer page={page}/>}
     </div>

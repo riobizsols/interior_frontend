@@ -2,50 +2,66 @@ import React, { useState, useEffect} from 'react';
 // import {useCart} from '.../Page/CartContext'
 // import assetsdetail from '../../assets/Assets_design/dvnfjvvf 1.png' 
 import '../AssetsDetails/AssetsDetails.css'
-
-import greychair from '../../assets/Assets_design/assetschair.png'
 // import greychair from '../../assets/Assets_design/assetschair.png'
-import redchair from '../../assets/Assets_design/red_chair.png'
-import bluechair from '../../assets/Assets_design/bluechair.png'
-import goldchair from '../../assets/Assets_design/goldchair.png'
-import pinkchair from '../../assets/Assets_design/pinkchair.png'
-import redsmallchair from '../../assets/Assets_design/red.png'
-import goldsmallchair from '../../assets/Assets_design/gold.png'
-import bluesmallchair from '../../assets/Assets_design/blue.png'
-import pinksmallchair from '../../assets/Assets_design/pink.png'
-import greysmallchair from '../../assets/Assets_design/grey.png'
+// import greychair from '../../assets/Assets_design/assetschair.png'
+// import redchair from '../../assets/Assets_design/red_chair.png'
+// import bluechair from '../../assets/Assets_design/bluechair.png'
+// import goldchair from '../../assets/Assets_design/goldchair.png'
+// import pinkchair from '../../assets/Assets_design/pinkchair.png'
+// import redsmallchair from '../../assets/Assets_design/red.png'
+// import goldsmallchair from '../../assets/Assets_design/gold.png'
+// import bluesmallchair from '../../assets/Assets_design/blue.png'
+// import pinksmallchair from '../../assets/Assets_design/pink.png'
+// import greysmallchair from '../../assets/Assets_design/grey.png'
 import { FiArrowLeft } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
-import chair from '../../assets/Assets_design/assetschair.png'
-import grey from '../../assets/Assets_design/Maskgroup1.png'
-import brown from '../../assets/Assets_design/Maskgroup2.png'
-import lightgrey from '../../assets/Assets_design/Maskgroup3.png'
-import drakbrown from '../../assets/Assets_design/Maskgroup4.png'
-import puple from '../../assets/Assets_design/Maskgroup5.png'
-import gold from '../../assets/Assets_design/Maskgroup6.png'
-import { Link } from 'react-router-dom'
+// import chair from '../../assets/Assets_design/assetschair.png'
+// import grey from '../../assets/Assets_design/Maskgroup1.png'
+// import brown from '../../assets/Assets_design/Maskgroup2.png'
+// import lightgrey from '../../assets/Assets_design/Maskgroup3.png'
+// import drakbrown from '../../assets/Assets_design/Maskgroup4.png'
+// import puple from '../../assets/Assets_design/Maskgroup5.png'
+// import gold from '../../assets/Assets_design/Maskgroup6.png'
+import { Link, useLocation } from 'react-router-dom'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { SiInstagram } from 'react-icons/si'
 import { IoLogoYoutube } from 'react-icons/io'
-import AssetsTrace from '../../assets/Assets_design/AssetTraced.png'
-import trace from '../../assets/Assets_design/Traced.png'
+// import AssetsTrace from '../../assets/Assets_design/AssetTraced.png'
+// import trace from '../../assets/Assets_design/Traced.png'
 
-const products = [
-  { id: 1,  image: redsmallchair, bigImage: redchair, price:4999,  quantity:0},
-  { id: 2,  image: greysmallchair, bigImage: greychair, price:5999, quantity:0},
-  { id: 3,  image: bluesmallchair, bigImage: bluechair, price:6999, quantity:0 },
-  { id: 4,  image: goldsmallchair, bigImage: goldchair, price:7999, quantity:0 },
-  { id: 5,  image: pinksmallchair, bigImage: pinkchair, price:8999, quantity:0 },
-];
+
 
 
 const AssetsDetails = () => {
+  const location = useLocation();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // const {src, name, category, smallImages, mainImages } = location.state || {};
+  // const { addToCart } = useCart(); 
+  const { src, name, category, smallImages = [], mainImages = "" } = location.state || {};
+
+
+  // const products = [
+  //    //{ id: 1,  image: smallImages[0], bigImage: src, price:4999,  quantity:0},
+  //   { id: 1,  image: smallImages[3], bigImage: src, price:4999,  quantity:0},
+  //   { id: 2,  image: smallImages[1], bigImage: mainImages, price:5999, quantity:0},
+  //   { id: 3,  image: smallImages[2], bigImage: mainImages, price:6999, quantity:0 },
+  //   { id: 4,  image: smallImages[0], bigImage: mainImages, price:7999, quantity:0 },
+  //   { id: 5,  image: smallImages[4], bigImage: mainImages, price:8999, quantity:0 },
+  // ];
+
+  const products = [
+    { id: 1, image: smallImages[0] || "", bigImage: src || "", price: 4999, quantity: 0 },
+    { id: 2, image: smallImages[1] || "", bigImage: mainImages[1] || "", price: 5999, quantity: 0 },
+    { id: 3, image: smallImages[2] || "", bigImage: mainImages[2] || "", price: 6999, quantity: 0 },
+    { id: 4, image: smallImages[3] || "", bigImage: mainImages[3] || "", price: 7999, quantity: 0 },
+    { id: 5, image: smallImages[4] || "", bigImage: mainImages[4] || "", price: 8999, quantity: 0 },
+  ];
+  
+  console.log(mainImages)
+  console.log(smallImages)
 
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // const { addToCart } = useCart(); 
 
- 
 
   const handleNext = () => {
     const newIndex = (currentIndex + 1) % products.length;
@@ -85,14 +101,14 @@ const AssetsDetails = () => {
        <div className='flex assetsdetails_container '>
        <div className=' px-16 assest_col1'>
             <h4>CozyHaven</h4>
-            <h3 className='text-lg'>Velvet Bliss</h3>
+            <h3 className='text-lg'>{name}</h3>
             <p>Experience luxury with the Velvet Bliss Armchair, wrapped in premium velvet fabric with deep cushioning for unmatched comfort. Its chic design elevates any living space while providing a snug seating experience.</p>
-            <img src={AssetsTrace} alt=""/>
+            <img src="/Assets_design/AssetTraced.png" alt=""/>
            </div>
            <div className='assest_col2 mb-14' >
            <div className="carousel-container">   
       <div className="big-image-container">
-        
+      {/* {src && <img src={src} alt="Big Design" />} */}
          <img
           src={selectedProduct.bigImage}
           alt={selectedProduct.name}
@@ -133,25 +149,25 @@ const AssetsDetails = () => {
             <p>Available Materials</p>
             <div id='assets_col3_color'>
             <div className='color'>
-          <img src={grey} alt="" />
+          <img src="/Assets_design/Maskgroup1.png" alt="" />
         </div>
         <div className='color'>
-          <img src={brown} alt="" />
+          <img src="/Assets_design/Maskgroup2.png" alt="" />
         </div>
         <div className='color'>
-          <img src={lightgrey} alt="" />
+          <img src="/Assets_design/Maskgroup3.png" alt="" />
         </div>
         <div className='color'>
-          <img src={drakbrown} alt="" />
+          <img src="/Assets_design/Maskgroup4.png" alt="" />
         </div>
         
             </div>
             <div id='assets_col3_color1'>
             <div className='color'>
-          <img src={puple} alt="" />
+          <img src="/Assets_design/Maskgroup5.png" alt="" />
         </div>
         <div className='color'>
-          <img src={gold} alt="" />
+          <img src="/Assets_design/Maskgroup6.png" alt="" />
         </div>
        
         

@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import emailjs from "emailjs-com";
+import image_19 from '../../assets/image 19.png'
 import "../../Components/Contactform/MainContact.css";
 import { div } from "framer-motion/m";
 import FooterContact from "../Footer/FooterContact";
@@ -39,7 +40,7 @@ const MainContact = () => {
 
 
   return (
-    <div >
+    <div className="main_contact_form" >
         <h1 className="main_title">Talk to Our Designer</h1>
     <div className="contact-form-container">
       
@@ -89,11 +90,13 @@ const MainContact = () => {
           />
           You can reach me on WhatsApp
         </label>
-
+        
         <button type="submit" className="submit-button">Talk to Our Design Consultant</button>
         <p className="confirmation_message">{message}</p>
-      
     </div>
+    <div className="water_mark_contact">
+              <img src={image_19} alt="image_19" />
+            </div>
     <FooterContact/>
     </div>
   );

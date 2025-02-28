@@ -162,42 +162,42 @@ const HomePage = () => {
     {
       title: "Living Room",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Elegant and cozy designs to create a stylish, inviting space that reflects your lifestyle.",
       image:interior_livingroom,
       page: "/livingroom",
     },
     {
       title: "Kitchen",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Modern, functional kitchens designed for efficiency, aesthetics, and an enhanced cooking experience.",
       image:interior_kitchen,
       page: "/kitchen",
     },
     {
       title: "Bed Room",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Relax in a serene bedroom with stylish decor, perfect lighting, and a cozy ambiance for restful sleep.",
       image:interior_bedroom,
       page: "/bedroom",
     },
     {
       title: "Bath Room",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Upgrade to a sleek, luxurious bathroom with smart space utilization and a spa-like feel for comfort.",
       image:interior_bathroom,
       page: "/bathroom",
     },
     {
       title: "Home Office",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Boost productivity with a stylish, ergonomic workspace that blends function and modern aesthetics.",
       image:interior_homeoffice,
       page: "/homeoffice",
     },
     {
       title: "Assets",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.",
+        "Premium furniture, lighting, and decor to enhance your home with elegance, quality, and sophistication..",
       image:interior_assets,
       page: "/assets",
     },
@@ -319,7 +319,7 @@ const HomePage = () => {
             <p>Innovative Designs Created</p>
           </div>
         </div>
-        <Link to="/">
+        <Link to="/contactform">
         <button className="contact-button">Contact us</button>
         </Link>
       </div>

@@ -1,6 +1,7 @@
 .assetsdetails_container{
     max-width: 100%;
     background: #101010;
+    padding: 135px;
   }
   .assets_product{
     display: grid;
@@ -76,7 +77,7 @@
   .assest_col1 img{
       width: 300px;
       height: 300px;
-      /* margin-top: 110px; */
+      margin-top: 60px;
   }
   
   .assest_col2{
