@@ -51,10 +51,10 @@ const AssetsDetails = () => {
 
   const products = [
     { id: 1, image: smallImages[0] || "", bigImage: src || "", price: 4999, quantity: 0 },
-    { id: 2, image: smallImages[1] || "", bigImage: mainImages[1] || "", price: 5999, quantity: 0 },
-    { id: 3, image: smallImages[2] || "", bigImage: mainImages[2] || "", price: 6999, quantity: 0 },
-    { id: 4, image: smallImages[3] || "", bigImage: mainImages[3] || "", price: 7999, quantity: 0 },
-    { id: 5, image: smallImages[4] || "", bigImage: mainImages[4] || "", price: 8999, quantity: 0 },
+    { id: 2, image: smallImages[1] || "", bigImage: mainImages[0] || "", price: 5999, quantity: 0 },
+    { id: 3, image: smallImages[2] || "", bigImage: mainImages[1] || "", price: 6999, quantity: 0 },
+    { id: 4, image: smallImages[3] || "", bigImage: mainImages[2] || "", price: 7999, quantity: 0 },
+    { id: 5, image: smallImages[4] || "", bigImage: mainImages[3] || "", price: 8999, quantity: 0 },
   ];
   
   console.log(mainImages)

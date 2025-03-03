@@ -26,7 +26,7 @@ const Banner = ({ page }) => {
     { page: "bathroom", title: "Bath Room", description: "Contact us for more info.", image: bathroom_banner,  button: "Talk to Our Design Consultant" },
     { page: "kitchen", title: "Kitchen", description: "Contact us for more info.", image: kitchen_banner,  button: "Talk to Our Design Consultant" },
     { page: "homeoffice", title: "Home Office", description: "Contact us for more info.", image: homeoffice_banner,  button: "Talk to Our Design Consultant" },
-    { page: "blog1", title: "Home Office", description: "Contact us for more info.", image: blog1_banner,  button: "Talk to Our Design Consultant" },
+    { page: "blog1", title: "Blogs", description: "Contact us for more info.", image: blog1_banner,  button: "Talk to Our Design Consultant" },
     { page: "blog", title: "Blogs", description: "Contact us for more info.", image: blog_banner,  button: "Talk to Our Design Consultant" },
     { page: "livingroomname", title: "Living Room Name", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },
     { page: "assetsdetails", title: "Assets Details", description: "Contact us for more info.", image: assets_banner,  button: "Talk to Our Design Consultant" },

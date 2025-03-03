@@ -613,7 +613,7 @@
 .features-text p {
   line-height: 1.5;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .features-list {
@@ -636,7 +636,7 @@
   border-radius: 54px;
   color: white;
   cursor: pointer;
-  /* height: 25vh; */
+  height: 30vh;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
@@ -681,7 +681,7 @@
 
 .feature-item h3{
   color: #D5BA94;
-
+  font-size: 25px;
 }
 .features-image {
   flex: 1;
@@ -1725,8 +1725,8 @@ margin: 0 0 5px 0;
 }
 
 .image-text2 p {
-font-size: 10px;
-color: #616160;
+font-size: 12px;
+color: #ffffff;
 }
 
 /* For tablets and smaller screens (max-width: 1024px) */

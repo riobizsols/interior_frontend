@@ -2,38 +2,56 @@ import React, { useState } from 'react';
 import '../Contactform/Contact.css'; // Your CSS for styling
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'; // Import the default styling
+import * as Yup from "yup";
+import axios from "axios";
+import { useFormik } from "formik";
+
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [whatsapp, setWhatsapp] = useState(false);
-  const [address, setAddress] = useState('');
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+    const formik = useFormik({
+      initialValues: {
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        whatsapp: false,
+      },
+      validationSchema: Yup.object({
+        name: Yup.string().required("Name is required"),
+        email: Yup.string().email("Invalid email").required("Email is required"),
+        phone: Yup.string().required("Phone number is required"),
+        address: Yup.string().required("Address is required"),
+      }),
+      onSubmit: async (values, { resetForm }) => {
+        console.log("Form submitted:", values); // Debug log
+        try {
+          const response = await axios.post("http://localhost:5001/contact-email", values);
+          setMessage(response.data.message);
+          alert('mail send successfully')
+          resetForm();
+        } catch (error) {
+          console.error("Submission error:", error); // Debug log
+          setMessage("Failed to send email. Please try again later.");
+        }
+      },
+    });
 
-    // Validate required fields
-    if (!name || !email || !phone) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
-    console.log('Form submitted:', { name, email, phone, whatsapp, address });
-  };
 
   return (
     <div className="contact-container">
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={formik.handleSubmit} className="contact-form">
         <h2>Talk to Our Designer</h2>
 
         {/* Name Field */}
         <div className="form-group">
           <input
             type="text"
+            name="name"
             placeholder="Enter your full name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formik.values.name}
+            onChange={formik.handleChange}
             aria-label="Enter your full name"
             required
           />
@@ -43,9 +61,10 @@ const ContactForm = () => {
         <div className="form-group">
           <input
             type="email"
+            name="email"
             placeholder="Enter your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formik.values.email}
+            onChange={formik.handleChange}
             aria-label="Enter your email address"
             required
           />
@@ -56,9 +75,11 @@ const ContactForm = () => {
           <PhoneInput
             international
             defaultCountry="IN"
+            type="phone"
+            name="phone"
             placeholder="Enter your phone number"
-            value={phone}
-            onChange={setPhone}
+            value={formik.values.phone}
+  onChange={(value) => formik.setFieldValue("phone", value)} // Correct way
             aria-label="Enter your phone number"
             required
           />
@@ -79,9 +100,10 @@ const ContactForm = () => {
 <div className="form-group whatsapp-group">
   <input
     type="checkbox"
+    name="whatsapp"
     id="whatsapp"
-    checked={whatsapp}
-    onChange={(e) => setWhatsapp(e.target.checked)}
+    checked={formik.values.whatsapp}
+    onChange={formik.handleChange}
   />
   <label htmlFor="whatsapp">You can reach me on WhatsApp</label>
 </div>
@@ -90,9 +112,10 @@ const ContactForm = () => {
         <div className="form-group">
           <input
             type="text"
+            name="address"
             placeholder="Enter your address (optional)"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            value={formik.values.address}
+            onChange={formik.handleChange}
             aria-label="Enter your address (optional)"
           />
         </div>
@@ -103,7 +126,7 @@ const ContactForm = () => {
         </button>
 
         {/* Footer Text */}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="confirmation_message_miniform">{message}</p>
       </form>
     </div>
   );

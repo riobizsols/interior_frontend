@@ -35,6 +35,8 @@ const designs = [
 
 ];
 
+const discription = "Create a serene and relaxing bedroom with soft lighting, plush bedding, and personalized décor. A harmonious blend of colors and textures can elevate your space, ensuring it’s not just a place to sleep but a sanctuary for relaxation and rejuvenation."
+
 //   const handleImageClick = (id) => {
 //     navigate(`/design/${id}`);
 //   };
@@ -66,9 +68,7 @@ const designs = [
       <section className="interior_designs">
         <div className='interior_head_desc'>
         <h3>BedRoom Interior <br/>Designs</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui,
-             nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+        <p>{discription}</p>
           
         </div>
         <div className='filter_sec'>
@@ -119,7 +119,7 @@ const designs = [
               <Link
                 key={design.id}
                 to="/design"
-                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, }}
+                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, discription:discription }}
               >
                 <div className="livingroom_design_item">
                   <h4 className="overlay_text">{design.category}</h4>

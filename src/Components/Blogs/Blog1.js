@@ -13,7 +13,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Blog1 = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const {image, date, title, description} = location.state || {}
+  const {image, date, title, description, secondTitle, overView} = location.state || {}
   const accordionItems = [
     {
       label: 'Bed Room',
@@ -49,13 +49,9 @@ const Blog1 = () => {
       <div className="main-grid">
         <section className="blogsec">
           <div className="blogcontent">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, 
-             dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, ultrices eget risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, ultrices eget risus.
+           <p>Creating a visually appealing and functional living space is an art. Thoughtfully designed interiors can enhance comfort, reflect personal taste, and maximize efficiency. By carefully selecting furniture, colors, and decor, you can establish a harmonious ambiance that suits your lifestyle.
           </p>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, 
-             dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, ultrices eget risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, ultrices eget risus.
+           <p>Every design element plays a role in shaping a cohesive and welcoming environment. Soft lighting, textured materials, and well-placed accents contribute to a balanced aesthetic. Whether you prefer a modern, classic, or minimalist look, each choice influences the atmosphere of your home, making it both stylish and practical.
           </p>
            
             <h2>{title}</h2>
@@ -63,13 +59,10 @@ const Blog1 = () => {
             <p>{description}</p>
            
             {/* <img className="blogcontent-img" src={blogimg1} alt="Blog Content Image 1" /> */}
-            {image && <img src={image} alt="Blog Content Image 1" />}
-            <h2>Lorem ipsum is dolor sit amet, sit amet</h2>
+            {image && <img src={image} className='blog_img' alt="Blog Content Image 1" />}
+            <h2>{secondTitle}</h2>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit,
-              dolor nulla commodo dui, nec ultricies arcu nisl tristique eros. Morbi eros est, pulvinar eget ornare ac, ultrices eget risus.
-            </p>
+            <p>{overView}</p>
 
           </div>
         </section>

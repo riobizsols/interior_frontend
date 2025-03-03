@@ -51,7 +51,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 const Livingroom = () => {
   
 const designs = [
-  { id: 1, image: Mask16, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
+  { id: 1, image: Mask16, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ],},
   { id: 2, image: Mask2, category: 'Classic', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3,] },
   { id: 3, image: Mask3, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
   { id: 4, image: Mask4, category: 'Modern', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ] },
@@ -89,6 +89,7 @@ const designs = [
   { id: 36, image: Mask36, category: 'Trendy', RelatedPage: 'Livingroom', smallImages: [Mask1, Mask2, Mask3, ]  }, 
 ];
 
+  const discription ="Transform your living room into a stylish and cozy retreat with modern furnishings, elegant lighting, and a perfect blend of textures. Whether you prefer minimalistic, contemporary, or classic aesthetics, the right décor enhances comfort and functionality."
   // const handleImageClick = (id) => {
   //   navigate(`/design/${id}`);
   // };
@@ -120,9 +121,7 @@ const designs = [
       <section className="interior_designs">
         <div className='interior_head_desc'>
         <h3>Living Room Interior <br/>Designs</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-             Etiam ornare tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor nulla commodo dui,
-             nec ultricies arcu nisl tristique eros. Morbi eros Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare tempus aliquet.</p>
+        <p> {discription}</p>
           
         </div>
         <div className='filter_sec'>
@@ -173,7 +172,7 @@ const designs = [
               <Link
                 key={design.id}
                 to="/design"
-                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, }}
+                state={{ image: design.image, category: design.category, RelatedPage:design.RelatedPage, smallImages: design.smallImages, discription:discription }}
               >
                 <div className="livingroom_design_item">
                   <h4 className="overlay_text">{design.category}</h4>

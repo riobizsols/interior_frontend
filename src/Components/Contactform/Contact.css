@@ -30,6 +30,7 @@
 
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="phone"],
 .react-phone-number-input__input {
   width: 100%;
   padding: 8px 10px; /* Reduced padding */
@@ -84,8 +85,9 @@
   background-color: #a89001;
 }
 
-.contact-form p {
-  font-size: 10px; /* Reduced font size */
-  margin-top: 10px; /* Reduced margin */
-  color: #aaa;
+.confirmation_message_miniform{
+  font-size: 12px;
+    color: #d9a678;
+    margin: 6px;
+    text-align: center;
 }

@@ -32,15 +32,15 @@ const Assets = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const assets = [
-    { id: 1, name: "Dining Table", category: "Furniture", src: image9, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 2, name: "Ceiling Fan", category: "Electronics", src: image14, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 3, name: "Ceiling Light", category: "Electronics", src: image16, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 4, name: "Sofa", category: "Furniture", src: image18, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], mainImages: ["/Assets_design/assetschair.png", "/Assets_design/red_chair.png", "/Assets_design/pinkchair.png", "/Assets_design/goldchair.png", "/Assets_design/bluechair.png"]},
+    { id: 1, name: "Dining Table", category: "Furniture", src: image9, smallImages: [image9, "/Assets_design/dinning table/dinning-table-1.webp", "/Assets_design/dinning table/dinning-table-2.webp", "/Assets_design/dinning table/dinning-table-3.webp", "/Assets_design/dinning table/dinning-table-4.webp"],mainImages: [ "/Assets_design/dinning table/dinning-table-1.webp", "/Assets_design/dinning table/dinning-table-2.webp", "/Assets_design/dinning table/dinning-table-3.webp", "/Assets_design/dinning table/dinning-table-4.webp"], },
+    { id: 2, name: "Ceiling Fan", category: "Electronics", src: image16, smallImages: [image16, "/Assets_design/celing fan/celing_fan-1.webp", "/Assets_design/celing fan/celing_fan-2.webp", "/Assets_design/celing fan/celing_fan-3.webp", "/Assets_design/celing fan/celing_fan-4.webp"], mainImages: [ "/Assets_design/celing fan/celing_fan-1.webp", "/Assets_design/celing fan/celing_fan-2.webp", "/Assets_design/celing fan/celing_fan-3.webp", "/Assets_design/celing fan/celing_fan-4.webp"],},
+    { id: 3, name: "Ceiling Light", category: "Electronics", src: image14, smallImages: [image14, "/Assets_design/celing light/celing-light-1.webp", "/Assets_design/celing light/celing-light-2.webp", "/Assets_design/celing light/celing-light-3.webp", "/Assets_design/celing light/celing-light-4.webp"], mainImages: ["/Assets_design/celing light/celing-light-1.webp", "/Assets_design/celing light/celing-light-2.webp", "/Assets_design/celing light/celing-light-3.webp", "/Assets_design/celing light/celing-light-4.webp"],},
+    { id: 4, name: "Recliner", category: "Furniture", src: image18, smallImages: [image18, "/Assets_design/comfotable sofa_black_81x91.png", "/Assets_design/comfotable sofa_brown_81x91.png", "/Assets_design/comfotable sofa_green_81x91.png", "/Assets_design/comfotable sofa_navy_blue_81x91.png"], mainImages: ["/Assets_design/big-comfotable-sofa-green.webp", "/Assets_design/big-comfotable-sofa-brown.webp", "/Assets_design/big-comfotable-sofa-black.webp", "/Assets_design/big-comfotable-sofa-blue.webp",  ]},
     { id: 5, name: "Sofa Chair", category: "Furniture", src: image10, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], mainImages: ["/Assets_design/assetschair.png", "/Assets_design/goldchair.png", "/Assets_design/bluechair.png", "/Assets_design/red_chair.png", "/Assets_design/pinkchair.png"] },
-    { id: 6, name: "L Shape Sofa", category: "Furniture", src: image15, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 7, name: "Recliner", category: "Furniture", src: image12, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 8, name: "Wooden Table", category: "Furniture", src: image17, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
-    { id: 9, name: "Wooden Door", category: "Furniture", src: image13, smallImages: ["/Assets_design/grey.png", "/Assets_design/gold.png", "/Assets_design/blue.png", "/Assets_design/red.png", "/Assets_design/pink.png"], },
+    { id: 6, name: "L Shape Sofa", category: "Furniture", src: image15, smallImages: [image15, "/Assets_design/L-shape/l-shape-1.webp", "/Assets_design/L-shape/l-shape-2.webp", "/Assets_design/L-shape/l-shape-3.webp", "/Assets_design/L-shape/l-shape-4.webp"], mainImages: [ "/Assets_design/L-shape/l-shape-1.webp", "/Assets_design/L-shape/l-shape-2.webp", "/Assets_design/L-shape/l-shape-3.webp", "/Assets_design/L-shape/l-shape-4.webp"],},
+    { id: 7, name: "Sofa", category: "Furniture", src: image12, smallImages: [image12, "/Assets_design/sofa/normal-sofa-1.webp", "/Assets_design/sofa/normal-sofa-2.webp", "/Assets_design/sofa/normal-sofa-3.webp", "/Assets_design/sofa/normal-sofa-4.webp"], mainImages: [ "/Assets_design/sofa/normal-sofa-1.webp", "/Assets_design/sofa/normal-sofa-2.webp", "/Assets_design/sofa/normal-sofa-3.webp", "/Assets_design/sofa/normal-sofa-4.webp"], },
+    { id: 8, name: "Wooden Table", category: "Furniture", src: image17, smallImages: [image17, "/Assets_design/wood table/wood-table-1.webp", "/Assets_design/wood table/wood-table-2.webp", "/Assets_design/wood table/wood-table-3.webp", "/Assets_design/wood table/wood-table-4.webp"],  mainImages: ["/Assets_design/wood table/wood-table-1.webp", "/Assets_design/wood table/wood-table-2.webp", "/Assets_design/wood table/wood-table-3.webp", "/Assets_design/wood table/wood-table-4.webp"],},
+    { id: 9, name: "Wooden Door", category: "Furniture", src: image13, smallImages: [image13, "/Assets_design/wood door/wood-door-1.webp", "/Assets_design/wood door/wood-door-2.webp", "/Assets_design/wood door/wood-door-3.webp", "/Assets_design/wood door/wood-door-4.webp"], mainImages: ["/Assets_design/wood door/wood-door-1.webp", "/Assets_design/wood door/wood-door-2.webp", "/Assets_design/wood door/wood-door-3.webp", "/Assets_design/wood door/wood-door-4.webp"],},
   ];
 
   const filteredAssets = assets.filter(
@@ -55,13 +55,11 @@ console.log(filteredAssets)
      <div className="carousel-header">
         <div className="carousel_head1">
         <h2>Assets</h2>
-        <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+        <h1>Discover elegance and comfort in every detail, every space.</h1>
         </div>
         <div className="carousel_para">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          tempus aliquet. Pellentesque finibus, est et iaculis suscipit, dolor
-          nulla commodo dui, nec ultricies arcu nisi tristique eros.
+        Explore a curated selection of premium furnishings and decor. From timeless classics to modern aesthetics, each piece is crafted for sophistication, seamlessly blending style with function, and enhancing your living space with exquisite charm.
         </p>
         </div>
       </div>
