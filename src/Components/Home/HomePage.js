@@ -148,14 +148,14 @@ const HomePage = () => {
   ];
 
   const images3 = [
-    { src: image1, date:"16th Nov 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image2, date:"24th sept 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image3, date:"22th Apr 2024 ", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image4, date:"19th Mar 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image5, date:"11th Jun 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image6, date:"10th Dec 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image7, date:"27th July 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
-    { src: image8, date:"18th Feb 2024", title: "Lorem ipsum is dolor", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image1, date:"16th Nov 2024", title: " How to Choose the Perfect Color Palette for Your Living Room", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image2, date:"24th sept 2024", title: "Space-Saving Ideas for Small Living Rooms", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image3, date:"22th Apr 2024 ", title: "Trendy Living Room Décor Ideas for 2025", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image4, date:"19th Mar 2024", title: "How to Choose the Perfect Color Palette for Your Living Room", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image5, date:"11th Jun 2024", title: "Minimalist Living Room Design", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image6, date:"10th Dec 2024", title: "Budget-Friendly Living Room Makeover Ideas", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image7, date:"27th July 2024", title: "Luxury Living Room Designs That Will Leave You Inspired", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
+    { src: image8, date:"18th Feb 2024", title: "The Ultimate Guide to Living Room Lighting", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque ut, cumque ratione recusandae quae fugiat officiis quasi, dolores similique aliquam," },
   ];
 
   const featuresData = [
@@ -535,7 +535,7 @@ const HomePage = () => {
     <div className="projects-container-2">
       <div className="main_text">
       <h2>Blogs</h2>
-      <h1>Lorem ipsum is dolor sit amet, sit amet</h1>
+      <h1>Budget-Friendly Living Room Makeover Ideas</h1>
       </div>
 
       <div className="carousel-container">
